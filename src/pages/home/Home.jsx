@@ -1,12 +1,14 @@
-import { Navbar } from "../../components/home";
-import heroBg from '../../assets/heroBg.png';
+import { Hero, Info, Navbar, Technologies } from "../../components/home";
 
 const Home = () => {
   return (
-    <div className="bg-cover bg-center bg-no-repeat w-full h-[100vh]" style={{backgroundImage:`url(${heroBg})`}}>
+    <>
       <Navbar />
-    </div>
-  )
-}
+      <Hero />
+      <Info />
+      <Technologies />
+    </>
+  );
+};
 
-export default Home
+export default Home;

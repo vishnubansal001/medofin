@@ -19,7 +19,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="bg-opacity-20 bg-white fixed w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden">
+      <div className="bg-opacity-20 bg-white fixed w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden z-[1000]">
         <div className="flex flex-row justify-between w-full gap-5 items-center">
           <div className="flex">
             <img src={logo} alt="img/logo png" className="w-16" />
@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav className="bg-opacity-20 bg-white fixed w-full py-3 px-8 flex-col justify-center items-center flex lg:hidden">
+      <nav className="bg-opacity-20 bg-white fixed w-full py-3 px-8 flex-col justify-center items-center flex lg:hidden z-[1000]">
         <div className="flex flex-row justify-between w-full gap-5 items-center">
           <div>
             <img
