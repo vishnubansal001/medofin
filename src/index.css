@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 .img{
-    background-image: url('./assets//signup.png');
+    background-image: url('./assets/signup.png');
 }
 
 @media screen and (max-width: 768px) {
     .img{
-        background-image: url('./assets/signup2.png');
+        background:none;
+    }
+}
+
+.img1{
+    background-image: url('./assets/signin1.png');
+}
+
+@media screen and (max-width: 768px) {
+    .img1{
+        background-image: url('./assets/signin.png');
     }
 }
