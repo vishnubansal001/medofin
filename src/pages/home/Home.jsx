@@ -1,5 +1,7 @@
 import {
+  Ans,
   Facilities,
+  Footer,
   Hero,
   Info,
   Navbar,
@@ -16,6 +18,8 @@ const Home = () => {
       <Technologies />
       <Facilities />
       <Sign />
+      <Ans />
+      <Footer />
     </>
   );
 };

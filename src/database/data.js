@@ -13,3 +13,28 @@ export const techno = [
     img: a5,
   },
 ];
+
+export const ques = [
+  {
+    que: "Is online consultation as effective as in-person?",
+    ans: "With Medofine, online consultation is just as effective! Our professional medical team will ensure you get the best care you need.",
+  },
+  {
+    que: "Will my medical information be secure?",
+    ans: "Absolutely! At Medofin, we take your privacy seriously. Your information is kept confidential and secure.",
+  },
+  {
+    que: "Can I cancel my subscription anytime?",
+    ans: "Completely! You’re never locked in. Cancel anytime.",
+  },
+  {
+    que: "What if I am not satisfied with the service?",
+    ans: "We strive to offer the best service. If you’re not thrilled, we offer a flexible refund policy. Your satisfaction is our concern.",
+  },
+];
+
+export const secs = [
+  ["Company", "About Us", "Blog", "Careers"],
+  ["Support", "Contact Us", "Privacy Policy", "Help Center"],
+  ["Social", "Facebook", "Twitter", "LinkedIn"],
+];
