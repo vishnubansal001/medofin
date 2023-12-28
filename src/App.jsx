@@ -7,7 +7,7 @@ import Labs from "./pages/labs/Labs";
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />}></Route>
+      <Route exact path="/" element={<Home />}/>
       <Route path="/sign-in" element={<SignIn />}></Route>
       <Route path="/sign-up" element={<SignUp />}></Route>
       <Route path="/labs" element={<Labs />}></Route>

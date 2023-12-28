@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img{
+    background-image: url('./assets//signup.png');
+}
+
+@media screen and (max-width: 768px) {
+    .img{
+        background-image: url('./assets/signup2.png');
+    }
+}
