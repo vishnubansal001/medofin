@@ -9,7 +9,7 @@ const Facilities = () => {
         <h1 className="lg:text-5xl md:text-3xl sm:text-2xl text-xl font-semibold text-[#28661E]">
           Our Facilities
         </h1>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-evenly w-full">
+        <div className="flex flex-wrap justify-around gap-4 w-full items-center">
           <img src={a1} alt="" />
           <img src={a2} alt="" />
           <img src={a3} alt="" />

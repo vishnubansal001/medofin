@@ -12,11 +12,11 @@ const Form = () => {
   };
   return (
     <>
-      <div className="bg-cover bg-no-repeat flex select-none items-center justify-center min-h-screen h-full relative img1">
+      <div className="bg-cover bg-no-repeat  font-mons flex select-none items-center justify-center min-h-screen h-full relative img1">
         <div className="md:w-[60%]"></div>
         <div className="flex items-center md:w-[50%] w-full justify-center">
           <div className="flex flex-col-reverse md:flex-row w-full lg:gap-12 md:gap-10 gap-8">
-            <div className="w-full flex flex-col justify-between items-start p-8 h-screen bg-white md:rounded-r-[20px] md:rounded-tl-none rounded-t-[20px] lg:gap-10 gap-5">
+            <div className="w-full flex flex-col justify-between items-start p-8 h-screen md:rounded-r-[20px] md:rounded-tl-none rounded-t-[20px] lg:gap-10 gap-5">
               <div className="flex items-end w-full justify-end">
                 <img src={logo} alt="" className="w-16" />
               </div>

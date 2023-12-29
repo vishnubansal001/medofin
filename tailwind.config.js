@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx,html,htm}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        popp: ["Poppins", "sans-serif"],
+        mons: ["Montserrat", "sans-serif"],
+        lime: ["LimeLight", "cursive"],
+        Inter: ['Inter', 'sans-serif'],
+        dmSans: ['DM Sans', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

@@ -8,6 +8,7 @@ import {
   Sign,
   Technologies,
 } from "../../components/home";
+import { techno } from "../../database/data";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Info />
-      <Technologies />
+      <Technologies techno={techno} />
       <Facilities />
       <Sign />
       <Ans />

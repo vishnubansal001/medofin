@@ -12,17 +12,17 @@ const Form = () => {
   };
   return (
     <>
-      <div className="bg-cover bg-no-repeat flex select-none items-center justify-center min-h-screen h-full relative img">
+      <div className="bg-cover bg-no-repeat flex select-none font-mons items-center justify-center min-h-screen h-full relative img">
         <div className="flex items-center justify-center w-full">
           <div className="flex flex-col-reverse md:flex-row w-full lg:gap-12 md:gap-10 gap-8">
-            <div className="md:w-[50%] w-full flex flex-col justify-between items-start p-8 h-screen bg-white md:rounded-r-[20px] md:rounded-tl-none rounded-t-[20px] lg:gap-10 gap-5">
+            <div className="md:w-[45%] w-full flex flex-col justify-between items-start p-8 h-screen md:rounded-r-[20px] md:rounded-tl-none rounded-t-[20px] lg:gap-10 gap-5">
               <div>
                 <img src={logo} alt="" className="w-16" />
               </div>
               <div className="flex flex-col justify-center items-center md:items-start gap-5 w-full">
                 <div className="flex flex-col justify-center w-[90%] items-start gap-3">
                   <h1 className="font-bold lg:text-4xl text-[#272727] md:text-2xl text-xl">
-                    Join Us !
+                    join Us !
                   </h1>
                   <p className="font-normal lg:text-lg md:text-base text-sm text-[#525252] cursor-text">
                     experience the joy of holistic heathcare.
@@ -69,8 +69,7 @@ const Form = () => {
                       remember me
                     </label>
                   </div>
-                </form>
-                <button className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
+                  <button className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
                   sign up{" "}
                   <svg
                     width="20"
@@ -95,6 +94,8 @@ const Form = () => {
                     />
                   </svg>
                 </button>
+                </form>
+                
                 <p className="flex flex-row gap-2 text-[#525252] lg:text-base text-sm">
                   already have an account?
                   <span onClick={() => navigate('/sign-in')} className="text-[#28661E] underline">
