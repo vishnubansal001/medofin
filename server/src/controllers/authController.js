@@ -20,7 +20,8 @@ export const handleUserRegister = async (req, res) => {
 
     try {
         if (!email || !password || !name || !role) {
-            return res.status(400).json({ error: 'All fields are required' });
+            return res
+                .json({ error: 'All fields are required' });
         }
 
         // Check if the user exists
@@ -30,7 +31,7 @@ export const handleUserRegister = async (req, res) => {
         ]);
 
         if (user) {
-            return res.status(400).json({ error: 'User already exists' });
+            return res.json({ error: 'User already exists' });
         }
 
         // Hash the password
@@ -50,7 +51,18 @@ export const handleUserRegister = async (req, res) => {
 
         // Create and send the token
         const token = generateToken(newUser);
-        res.status(201).json({ success: true, message: 'User registered successfully', token });
+
+        // Set cookie with the token
+        const expiryDate = new Date(Date.now() + 3600000); // 1 hour
+
+        res
+            .cookie('Bearer', token, { httpOnly: true, expires: expiryDate })
+            .status(201)
+            .json({
+                success: true,
+                message: 'User registered successfully',
+                token
+            });
     } catch (error) {
         console.error('Error in user registration:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -77,11 +89,11 @@ export const handleUserLogin = async (req, res) => {
 
         // check if user exists
         if (!user) {
-            return res.status(400).json({ error: 'Invalid credentials' });
+            return res.status(400).json({ message: 'Invalid credentials' });
         }
 
         // check if password is correct
-        const isPasswordCorrect = await bcryptjs.compare(req.body.password, user.password);
+        const isPasswordCorrect = bcryptjs.compare(req.body.password, user.password);
 
         if (!isPasswordCorrect) {
             return res.status(400).json({ status: false, message: 'Invalid credentials' });

@@ -42,6 +42,7 @@ const Form = () => {
 
       if (data.error) {
         toast.error(data.error);
+        setLoading(false);
       } else {
         toast.success(data.message);
         // Clear the form data

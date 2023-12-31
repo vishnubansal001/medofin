@@ -3,15 +3,23 @@ import Home from "./pages/home/Home";
 import SignIn from "./components/signIn/Form";
 import SignUp from "./pages/signUp/SignUp";
 import Labs from "./pages/labs/Labs";
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/sign-in" element={<SignIn />}></Route>
-      <Route path="/sign-up" element={<SignUp />}></Route>
-      <Route path="/labs" element={<Labs />}></Route>
-    </Routes>
+    <>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
+      <Routes>
+
+        <Route exact path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SignIn />}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
+        <Route path="/labs" element={<Labs />}></Route>
+      </Routes>
+    </>
   );
 }
 

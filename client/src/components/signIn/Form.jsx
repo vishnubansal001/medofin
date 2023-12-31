@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 // import axios from "axios";
 // import toast from "react-hot-toast";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [btn, setBtn] = useState(false);
@@ -13,7 +13,7 @@ const Form = () => {
   //   password: ''
   // })
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onclick = () => {
     setBtn(!btn);
@@ -107,7 +107,7 @@ const Form = () => {
                   new user?
                   <button
                     type="submit"
-                    // onClick={() => navigate("/sign-up")}
+                    onClick={() => navigate("/sign-up")}
                     className="text-[#28661E] underline"
                   >
                     Sign Up
