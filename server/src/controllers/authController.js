@@ -70,7 +70,7 @@ export const handleUserRegister = async (req, res) => {
 };
 
 export const handleUserLogin = async (req, res) => {
-    const { email } = req.body;
+    const { email, password } = req.body;
 
     try {
         let user = null;
