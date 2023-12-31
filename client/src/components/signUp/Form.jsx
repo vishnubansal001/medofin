@@ -74,7 +74,7 @@ const Form = () => {
               <div>
                 <img src={logo} alt="" className="w-16" />
               </div>
-              <div className="flex flex-col justify-center items-center md:items-start gap-5 w-full">
+              <div className="flex flex-col justify-center items-center md:items-start w-full">
                 <div className="flex flex-col justify-center w-[90%] items-start gap-3">
                   <h1 className="font-bold lg:text-4xl text-[#272727] md:text-2xl text-xl">
                     join Us!
@@ -179,14 +179,14 @@ const Form = () => {
                   </button>
                 </form>
 
-                <p className="flex flex-row gap-2 text-[#525252] lg:text-base text-sm">
+                <p className="flex flex-row gap-2  text-[#525252] lg:text-base text-sm">
                   Already have an account?
-                  <span onClick={() => navigate('/sign-in')} className="text-[#28661E] underline">
+                  <span onClick={() => navigate('/sign-in')} className="text-[#28661E] font-semibold underline">
                     Sign In
                   </span>
                 </p>
               </div>
-              <div className="text-center w-full">
+              <div className="text-center mt-[-8px] w-full">
                 <p className="md:text-base text-sm text-[#525252]">
                   &copy; MEDOFIN
                 </p>
