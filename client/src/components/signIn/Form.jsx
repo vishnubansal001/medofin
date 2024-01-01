@@ -1,15 +1,57 @@
 import logo from "../../assets/logo.png";
+import axios from "axios";
+import toast from "react-hot-toast";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [btn, setBtn] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [loginData, setLoginData] = useState({
+    email: '',
+    password: ''
+  })
+
+
 
   const navigate = useNavigate();
 
   const onclick = () => {
     setBtn(!btn);
   };
+
+  const LoginForm = async (e) => {
+    e.preventDefault();
+    const { email, password } = loginData
+    try {
+      setLoading(true)
+
+      const { data } = await axios.post('/api/auth/login', {
+        email,
+        password
+      })
+      if (data.error) {
+        toast.error(data.error)
+      }
+      else {
+        toast.success("Login Successfull ! Welcome")
+        // Clear the form data
+        setLoginData({ email: '', password: '' });
+
+        setTimeout(() => {
+          navigate('/home')
+        }, 2000);
+        setLoading(false)
+      }
+
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
+    }
+  }
+
+
+
   return (
     <>
       <div className="bg-cover bg-no-repeat  font-mons flex select-none items-center justify-center min-h-screen h-full relative img1">
@@ -30,21 +72,23 @@ const Form = () => {
                   </p>
                 </div>
                 <form
-                  action=""
+                  onSubmit={LoginForm} action="#" method="POST"
                   className="flex flex-col gap-5 md:justify-start md:items-start justify-center items-start md:w-[90%] w-full"
                 >
                   <input
+                    value={loginData.email}
+                    onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
                     type="email"
-                    name=""
-                    id=""
-                    placeholder="email"
+                    placeholder="Enter Your Email"
+                    required
                     className="outline-none border-2 border-[#8D8D8D] shadow-md focus:shadow-xl transition-all duration-300 ease-in-out rounded-[12px] p-3 w-[90%]"
                   />
                   <input
                     type="password"
-                    name=""
-                    id=""
-                    placeholder="password"
+                    value={loginData.password}
+                    onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+                    placeholder="Enter your password"
+                    required
                     className="outline-none border-2 border-[#8D8D8D] shadow-md focus:shadow-xl transition-all duration-300 ease-in-out rounded-[12px] p-3 w-[90%]"
                   />
                   <div className="flex flex-row justify-between w-full">
@@ -66,40 +110,42 @@ const Form = () => {
                     </div>
                     <p className="text-[#28661E] underline">Forgot password?</p>
                   </div>
+                  <button
+                    type="submit"
+                    className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
+                    {loading ? 'Loading...' : 'Sign In'}
+                    <svg
+                      width="20"
+                      height="19"
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.45831 9.5H15.5416"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M10 3.95834L15.5417 9.50001L10 15.0417"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </form>
-                <button className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
-                  sign in{" "}
-                  <svg
-                    width="20"
-                    height="19"
-                    viewBox="0 0 20 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4.45831 9.5H15.5416"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 3.95834L15.5417 9.50001L10 15.0417"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
                 <p className="flex flex-row gap-2 text-[#525252] lg:text-base text-sm">
                   new user?
-                  <span
+                  <button
                     onClick={() => navigate("/sign-up")}
                     className="text-[#28661E] underline"
                   >
                     Sign Up
-                  </span>
+                  </button>
                 </p>
               </div>
               <div className="text-center w-full">
