@@ -5,6 +5,7 @@ import SignUp from "./pages/signUp/SignUp";
 import Labs from "./pages/labs/Labs";
 import { Toaster } from "react-hot-toast";
 import Experience from "./pages/experience/Experience";
+import Products from "./pages/product/Products";
 import Pharmecy from "./pages/pharmecy/Pharmecy";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/labs" element={<Labs />}></Route>
         <Route path="/exp" element={<Experience />}></Route>
+        <Route path="/products" element={<Products />}></Route>
         <Route path="/pharmecy" element={<Pharmecy />}></Route>
       </Routes>
     </>

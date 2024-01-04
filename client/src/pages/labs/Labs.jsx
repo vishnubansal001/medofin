@@ -11,9 +11,9 @@ const Labs = () => {
         <nav className="flex items-center justify-center w-full p-2">
           <div className="flex items-center justify-between p-1 w-full">
             <img src={logo} alt="logo" className="w-12 h-12" />
-            <NavLink className="text-base font-normal font-popp text-white">Home</NavLink>
-            <NavLink className="text-base font-normal font-popp text-white">LabTest</NavLink>
-            <NavLink className="text-base font-normal font-popp text-white">
+            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">Home</NavLink>
+            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">LabTest</NavLink>
+            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
               Sample Collection
             </NavLink>
           </div>
