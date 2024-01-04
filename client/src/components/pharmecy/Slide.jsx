@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { slide } from "../../database/data";
-import { Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/core";
 
 const Slide = () => {
   return (
