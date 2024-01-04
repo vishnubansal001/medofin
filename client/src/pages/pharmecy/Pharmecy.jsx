@@ -1,5 +1,5 @@
 import { Navbar } from "../../components/home";
-import { Hero, Shop, Slide } from "../../components/pharmecy";
+import { Boxes, Hero, Ser, Shop, Slide } from "../../components/pharmecy";
 
 const Pharmecy = () => {
   return (
@@ -8,6 +8,8 @@ const Pharmecy = () => {
       <Hero />
       <Shop />
       <Slide />
+      <Ser />
+      <Boxes />
     </>
   );
 };

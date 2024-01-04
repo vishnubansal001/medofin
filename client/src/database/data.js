@@ -12,6 +12,13 @@ import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
 import s4 from "../assets/s4.png";
 import s5 from "../assets/s5.png";
+import tra from "../assets/tra.png";
+import a24 from "../assets/24.png";
+import dis from "../assets/dis.png";
+import eo from "../assets/eo.png";
+import e1 from "../assets/e1.png";
+import e2 from "../assets/e2.png";
+import e3 from "../assets/e3.png";
 
 export const techno = [
   {
@@ -103,3 +110,44 @@ export const beta = [
 ];
 
 export const slide = [s1, s2, s3, s4, s5];
+
+export const cards = [
+  {
+    name: "Easy-order",
+    text: "Order medicines with few simple clicks",
+    img: eo,
+  },
+  {
+    name: "Track",
+    text: "Track your medicine dispatch",
+    img: tra,
+  },
+  {
+    name: "24X7",
+    text: "We are available 24x7 for you",
+    img: a24,
+  },
+  {
+    name: "Discounts",
+    text: "Amazing discounts on all products",
+    img: dis,
+  },
+];
+
+export const ee = [
+  {
+    name: "Medicine Box",
+    text: "All your medications, packed and shipped directly to your doorstep convenient, right?",
+    img: e1,
+  },
+  {
+    name: "Health Care",
+    text: "Get the best health care products and boost your well-being Awesome",
+    img: e2,
+  },
+  {
+    name: "Instant Delivery",
+    text: "Experience our lightning-fast Instant Delivery option. Sounds like fiction, but it's a fact.",
+    img: e3,
+  },
+];
