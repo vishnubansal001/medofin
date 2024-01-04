@@ -30,9 +30,8 @@
 /* Scrolbar */
 
 ::-webkit-scrollbar{
-    width: 6px;
-    height: 4px;    
-    
+   display: none;
+   width:none;
 }
 
 ::-webkit-scrollbar-track{
