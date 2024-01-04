@@ -1,5 +1,14 @@
-import { Navbar } from "../../components/home";
-import { Boxes, Hero, Ser, Shop, Slide } from "../../components/pharmecy";
+import { Footer, Navbar } from "../../components/home";
+import {
+  Blog,
+  Boxes,
+  Freq,
+  Hero,
+  Ser,
+  Shop,
+  Slide,
+  Spec,
+} from "../../components/pharmecy";
 
 const Pharmecy = () => {
   return (
@@ -10,6 +19,10 @@ const Pharmecy = () => {
       <Slide />
       <Ser />
       <Boxes />
+      <Spec />
+      <Blog />
+      <Freq />
+      <Footer />
     </>
   );
 };
