@@ -10,7 +10,7 @@ import {
   Spec,
 } from "../../components/pharmecy";
 
-const Pharmecy = () => {
+const Pharmacy = () => {
   return (
     <>
       <Navbar />
@@ -27,4 +27,4 @@ const Pharmecy = () => {
   );
 };
 
-export default Pharmecy;
+export default Pharmacy;
