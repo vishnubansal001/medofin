@@ -9,6 +9,7 @@ import {
   Slide,
   Spec,
 } from "../../components/pharmecy";
+import Prescription from "../../components/pharmecy/Prescription";
 
 const Pharmacy = () => {
   return (
@@ -20,6 +21,7 @@ const Pharmacy = () => {
       <Ser />
       <Boxes />
       <Spec />
+      <Prescription/>
       <Blog />
       <Freq />
       <Footer />
