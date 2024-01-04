@@ -3,6 +3,15 @@ import a5 from "../assets/a5.png";
 import lab1 from "../assets/lab1.svg";
 import lab2 from "../assets/lab2.svg";
 import lab3 from "../assets/lab3.svg";
+import b1 from "../assets/b1.png";
+import b2 from "../assets/b2.png";
+import b3 from "../assets/b3.png";
+import b4 from "../assets/b4.png";
+import s1 from "../assets/s1.png";
+import s2 from "../assets/s2.png";
+import s3 from "../assets/s3.png";
+import s4 from "../assets/s4.png";
+import s5 from "../assets/s5.png";
 
 export const techno = [
   {
@@ -32,9 +41,8 @@ export const labTechno = [
     heading: "Digital Reports",
     text: "Access your results online as soon as   share them in PDF format.",
     img: lab3,
-  }
-
-]
+  },
+];
 
 export const ques = [
   {
@@ -81,9 +89,17 @@ export const Labques = [
   },
 ];
 
-
 export const secs = [
   ["Company", "About Us", "Blog", "Careers"],
   ["Support", "Contact Us", "Privacy Policy", "Help Center"],
   ["Social", "Facebook", "Twitter", "LinkedIn"],
 ];
+
+export const beta = [
+  { img: b1, name: "Medicines", text: "Essentials at your doorstep" },
+  { img: b2, name: "Lab Tests", text: "Sample pickup at your home" },
+  { img: b3, name: "Doctors", text: "Confirmed appointments" },
+  { img: b4, name: "Add Health Records", text: "Connect within 60 secs" },
+];
+
+export const slide = [s1, s2, s3, s4, s5];
