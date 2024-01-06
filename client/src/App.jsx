@@ -5,7 +5,9 @@ import SignUp from "./pages/signUp/SignUp";
 import Labs from "./pages/labs/Labs";
 import { Toaster } from "react-hot-toast";
 import Experience from "./pages/experience/Experience";
-import Pharmecy from "./pages/pharmecy/Pharmecy";
+import Products from "./pages/product/Products";
+import Pharmacy from "./pages/pharmacy/Pharmacy";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/labs" element={<Labs />}></Route>
         <Route path="/exp" element={<Experience />}></Route>
-        <Route path="/pharmecy" element={<Pharmecy />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/pharmacy" element={<Pharmacy />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </>
   );

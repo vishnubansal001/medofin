@@ -12,6 +12,17 @@ import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
 import s4 from "../assets/s4.png";
 import s5 from "../assets/s5.png";
+import tra from "../assets/tra.png";
+import a24 from "../assets/24.png";
+import dis from "../assets/dis.png";
+import eo from "../assets/eo.png";
+import e1 from "../assets/e1.png";
+import e2 from "../assets/e2.png";
+import e3 from "../assets/e3.png";
+import d1 from "../assets/d1.png";
+import d2 from "../assets/d2.png";
+import d3 from "../assets/d3.png";
+import d4 from "../assets/d4.png";
 
 export const techno = [
   {
@@ -103,3 +114,90 @@ export const beta = [
 ];
 
 export const slide = [s1, s2, s3, s4, s5];
+
+export const cards = [
+  {
+    name: "Easy-order",
+    text: "Order medicines with few simple clicks",
+    img: eo,
+  },
+  {
+    name: "Track",
+    text: "Track your medicine dispatch",
+    img: tra,
+  },
+  {
+    name: "24X7",
+    text: "We are available 24x7 for you",
+    img: a24,
+  },
+  {
+    name: "Discounts",
+    text: "Amazing discounts on all products",
+    img: dis,
+  },
+];
+
+export const ee = [
+  {
+    name: "Medicine Box",
+    text: "All your medications, packed and shipped directly to your doorstep convenient, right?",
+    img: e1,
+  },
+  {
+    name: "Health Care",
+    text: "Get the best health care products and boost your well-being Awesome",
+    img: e2,
+  },
+  {
+    name: "Instant Delivery",
+    text: "Experience our lightning-fast Instant Delivery option. Sounds like fiction, but it's a fact.",
+    img: e3,
+  },
+];
+
+export const blogs = [
+  {
+    img: d1,
+    date: "20 Apr",
+    text1: "The Covid-19 Epidemic In 2022",
+    text2: "Is Back",
+  },
+  {
+    img: d2,
+    date: "20 Apr",
+    text1: "The Covid-19 Epidemic In 2023",
+    text2: "Is Back",
+  },
+  {
+    img: d3,
+    date: "17 Mar",
+    text1: "Tellus pharetra lacus ligula",
+    text2: "fusce cum eu potenti",
+  },
+  {
+    img: d4,
+    date: "17 Mar",
+    text1: "Hac hendrerit mus nons semper",
+    text2: "suspendisse",
+  },
+];
+
+export const freq = [
+  {
+    que: "How does Medofin ensure quality?",
+    ans: "Our high-quality products pass through strict quality checks before heing sent to our customers",
+  },
+  {
+    que: "What payment methods are accepted?",
+    ans: "We accept all major credit and debit cards, and cash-on-delivery",
+  },
+  {
+    que: "What about non-prescription drugs?",
+    ans: "Absolutely! You can order over the counter products.",
+  },
+  {
+    que: "How to return a product?",
+    ans: "You can return the product within 30 days of purchase",
+  },
+];
