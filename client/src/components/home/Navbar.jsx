@@ -19,7 +19,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="bg-opacity-20 bg-white font-popp fixed w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden z-[1000]">
+      <div className=" bg-white font-popp fixed w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden z-[1000]">
         <div className="flex flex-row justify-between w-full gap-5 items-center">
           <div className="flex">
             <img src={logo} alt="img/logo png" className="w-16" />
@@ -95,11 +95,10 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: isSidebarOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`${
-            isSidebarOpen
+          className={`${isSidebarOpen
               ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
               : ""
-          }`}
+            }`}
         ></motion.div>
         <motion.div
           initial={{ x: "100%" }}
