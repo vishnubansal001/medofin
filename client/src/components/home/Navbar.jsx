@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { value: "Facilities", path: "/facilities" },
@@ -28,12 +29,12 @@ const Navbar = () => {
             <p className="lg:text-lg text-base cursor-pointer select-none">
               Facilities
             </p>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Categories
-            </p>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Doctors
-            </p>
+            <Link to="/pharmacy" className="lg:text-lg text-base cursor-pointer select-none">
+              Pharmacy
+            </Link>
+            <Link to="/products" className="lg:text-lg text-base cursor-pointer select-none">
+              Medicines
+            </Link>
             <p className="lg:text-lg text-base cursor-pointer select-none">
               Contact
             </p>
@@ -96,8 +97,8 @@ const Navbar = () => {
           animate={{ opacity: isSidebarOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
           className={`${isSidebarOpen
-              ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
-              : ""
+            ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
+            : ""
             }`}
         ></motion.div>
         <motion.div
