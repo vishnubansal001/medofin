@@ -85,8 +85,7 @@ export const handleUserLogin = async (req, res) => {
             user = doctor;
         }
 
-        console.log(user);
-
+    
         // check if user exists
         if (!user) {
             return res.status(400).json({ message: 'Invalid credentials' });
