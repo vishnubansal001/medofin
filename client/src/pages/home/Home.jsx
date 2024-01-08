@@ -8,6 +8,7 @@ import {
   Sign,
   Technologies,
 } from "../../components/home";
+import TopDoctors from "../../components/home/TopDoctors";
 import { techno } from "../../database/data";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Info />
       <Technologies techno={techno} />
       <Facilities />
+      <TopDoctors />
       <Sign />
       <Ans />
       <Footer />

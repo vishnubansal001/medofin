@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
 import "swiper/css";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
@@ -16,6 +16,9 @@ import { Footer } from "../../components/home";
 import coldProduct from "../../assets/coldProduct.png";
 import topsell from "../../assets/topsell.png";
 import health from "../../assets/health.png";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
 
 
 const data = [
@@ -388,17 +391,17 @@ const Products = () => {
         <section className="w-full h-full flex items-center justify-center relative overflow-hidden">
           <div className="flex items-center justify-center w-full h-full">
             <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center">
-                  <div className="flex items-center justify-center flex-col gap-4 text-white h-full bg-[#28661E] w-full p-12 sm:p-16 md:p-24 lg:p-32">
-                      <div className="flex items-start w-full justify-start font-Inter">
-                        <h1 className="text-2xl lg:text-4xl">Your health, made affordable</h1>
-                      </div>
-                      <div className="lg:text-base text-sm flex items-center justify-start font-Inter">
-                        <p> At Medofin, we believe everyone deserves access to quality medication at fair prices. We cut out unnecessary costs and partner directly with manufacturers to bring you the savings you need. So whether you&apos;re refilling a prescription or trying a new supplement, you can feel confident knowing you&apos;re getting the best value for your health. With Medofine, staying healthy is always within reach.</p>
-                      </div>
-                  </div>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <img src={health} alt="heath" className="w-full h-full"/>
-                  </div>
+              <div className="flex items-center justify-center flex-col gap-4 text-white h-full bg-[#28661E] w-full p-12 sm:p-16 md:p-24 lg:p-32">
+                <div className="flex items-start w-full justify-start font-Inter">
+                  <h1 className="text-2xl lg:text-4xl">Your health, made affordable</h1>
+                </div>
+                <div className="lg:text-base text-sm flex items-center justify-start font-Inter">
+                  <p> At Medofin, we believe everyone deserves access to quality medication at fair prices. We cut out unnecessary costs and partner directly with manufacturers to bring you the savings you need. So whether you&apos;re refilling a prescription or trying a new supplement, you can feel confident knowing you&apos;re getting the best value for your health. With Medofine, staying healthy is always within reach.</p>
+                </div>
+              </div>
+              <div className="w-full h-full flex items-center justify-center">
+                <img src={health} alt="heath" className="w-full h-full" />
+              </div>
             </div>
           </div>
         </section>

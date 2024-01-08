@@ -201,3 +201,37 @@ export const freq = [
     ans: "You can return the product within 30 days of purchase",
   },
 ];
+
+
+export const doctors = [
+  {
+    id: '01',
+    name: 'Dr. Rajesh Kumar',
+    specialization: 'General Physician',
+    avgRating: 4.5,
+    totalRating: 200,
+    photo: 'https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.webp?b=1&s=170667a&w=0&k=20&c=3GoWF_QG3WZoJK6CJWWY9Cxt5s6O-0I6qrU1QCnloKA=',
+    totalPatients: 1500,
+    hospital: 'Apollo Hospital New Delhi',
+  },
+  {
+    id: '02',
+    name: 'Dr. Sanjeev Sharma',
+    specialization: 'Orthopedic',
+    avgRating: 4.9,
+    totalRating: 290,
+    photo: 'https://i.pinimg.com/736x/df/3a/fd/df3afdcc8dea03631f892f31eded8202.jpg',
+    totalPatients: 1500,
+    hospital: ' IGMC Hospital Shimla',
+  },
+  {
+    id: '03',
+    name: 'Dr. Shivani Dhiman',
+    specialization: 'OPD Doctor',
+    avgRating: 5.0,
+    totalRating: 400,
+    photo: 'https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=ais',
+    totalPatients: 1500,
+    hospital: 'PGI Hospital Chandigarh',
+  }
+]
