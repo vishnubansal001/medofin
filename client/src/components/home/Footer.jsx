@@ -7,8 +7,8 @@ import bg from "../../assets/bg.png";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col font-Inter justify-center items-center lg:px-20 lg:pb-20 pb-10 px-10 relative overflow-hidden">
-      <div className="w-full flex flex-col justify-center items-center lg:px-20 lg:pb-20 pb-10 px-10 relative overflow-hidden">
+    <div className="w-full flex flex-col bg-black text-white  font-Inter justify-center items-center lg:px-20  px-10 relative overflow-hidden">
+      <div className="w-full flex flex-col justify-center items-center lg:px-20 pt-16 px-10 relative overflow-hidden">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:w-[70%] md:w-[80%] w-[90%]">
           {secs?.map((item, ind) => (
             <div
