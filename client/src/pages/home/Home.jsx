@@ -7,6 +7,7 @@ import {
   Navbar,
   Sign,
   Technologies,
+  Testimonials,
 } from "../../components/home";
 import TopDoctors from "../../components/home/TopDoctors";
 import { techno } from "../../database/data";
@@ -21,6 +22,7 @@ const Home = () => {
       <Facilities />
       <TopDoctors />
       <Sign />
+      <Testimonials />
       <Ans />
       <Footer />
     </>
