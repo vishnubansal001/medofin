@@ -26,9 +26,9 @@ const Navbar = () => {
             <img src={logo} alt="img/logo png" className="w-16" />
           </div>
           <div className="flex flex-row gap-8 items-center">
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Facilities
-            </p>
+            <Link to="/" className="lg:text-lg text-base cursor-pointer select-none">
+              Home
+            </Link>
             <Link to="/pharmacy" className="lg:text-lg text-base cursor-pointer select-none">
               Pharmacy
             </Link>
