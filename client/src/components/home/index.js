@@ -5,4 +5,4 @@ export { default as Technologies } from "./Technologies.jsx";
 export { default as Facilities } from "./Facilities.jsx";
 export { default as Sign } from "./Sign.jsx";
 export { default as Ans } from "./Ans.jsx";
-export {default as Footer} from "./Footer.jsx";
+export { default as Footer } from "./Footer.jsx";

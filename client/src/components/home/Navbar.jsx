@@ -35,9 +35,9 @@ const Navbar = () => {
             <Link to="/products" className="lg:text-lg text-base cursor-pointer select-none">
               Medicines
             </Link>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
+            <Link className="lg:text-lg text-base cursor-pointer select-none">
               Contact
-            </p>
+            </Link>
             <button
               onClick={() => navigate("/sign-in")}
               className="bg-white px-7 py-2 rounded-full border-2 border-[#3A4F39] font-semibold text-[#3a4f39]"
