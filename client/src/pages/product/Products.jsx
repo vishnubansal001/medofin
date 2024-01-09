@@ -176,10 +176,10 @@ const Products = () => {
               <img src={logo} alt="logo" className="w-12 h-12" />
               <p className="font-lime text-base sm:flex hidden">Medofin</p>
             </div>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
+            <NavLink to="/" className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
               Home
             </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
+            <NavLink to="/labs" className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
               LabTest
             </NavLink>
             <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">

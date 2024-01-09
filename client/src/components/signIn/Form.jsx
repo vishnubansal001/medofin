@@ -39,7 +39,7 @@ const Form = () => {
         setLoginData({ email: '', password: '' });
 
         setTimeout(() => {
-          navigate('/home')
+          navigate('/')
         }, 2000);
         setLoading(false)
       }

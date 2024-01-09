@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { value: "Facilities", path: "/facilities" },
@@ -25,27 +26,27 @@ const Navbar = () => {
             <img src={logo} alt="img/logo png" className="w-16" />
           </div>
           <div className="flex flex-row gap-8 items-center">
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Facilities
-            </p>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Categories
-            </p>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
-              Doctors
-            </p>
-            <p className="lg:text-lg text-base cursor-pointer select-none">
+            <Link to="/" className="lg:text-lg text-base cursor-pointer select-none">
+              Home
+            </Link>
+            <Link to="/pharmacy" className="lg:text-lg text-base cursor-pointer select-none">
+              Pharmacy
+            </Link>
+            <Link to="/products" className="lg:text-lg text-base cursor-pointer select-none">
+              Medicines
+            </Link>
+            <Link className="lg:text-lg text-base cursor-pointer select-none">
               Contact
-            </p>
+            </Link>
             <button
               onClick={() => navigate("/sign-in")}
-              className="bg-white px-7 py-2 rounded-full border-2 border-[#3A4F39] font-semibold text-[#3a4f39]"
+              className="bg-white px-7 py-2 rounded-full border-2 border-[#2a8981] font-semibold  text-[#2a8981]"
             >
               Sign In
             </button>
             <button
               onClick={() => navigate("/sign-up")}
-              className="bg-[#28661E] px-6 py-2 rounded-full border-2 border-[#28661E] font-semibold text-white"
+              className="bg-[#2a8981] px-6 py-2 rounded-full border-2 border-[#2a8981] font-semibold text-white"
             >
               Sign Up
             </button>
@@ -96,8 +97,8 @@ const Navbar = () => {
           animate={{ opacity: isSidebarOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
           className={`${isSidebarOpen
-              ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
-              : ""
+            ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
+            : ""
             }`}
         ></motion.div>
         <motion.div
