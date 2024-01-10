@@ -21,7 +21,7 @@ const Pharmacy = () => {
       <Ser />
       <Boxes />
       <Spec />
-      <Prescription/>
+      <Prescription />
       <Blog />
       <Freq />
       <Footer />

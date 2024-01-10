@@ -9,14 +9,14 @@ import Products from "./pages/product/Products";
 import Pharmacy from "./pages/pharmacy/Pharmacy";
 import Cart from "./pages/cart/Cart";
 import LabTest from "./pages/labtest/LabTest";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />

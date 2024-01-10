@@ -26,7 +26,12 @@ const How = () => {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:w-[70%] md:w-[90%] w-auto">
         {data.map((item, ind) => (
           <div key={ind} className="flex flex-row gap-5">
-            <img src={item.img} alt="img" className="w-16 h-16" data-aos="flip-left"/>
+            <img
+              src={item.img}
+              alt="img"
+              className="w-16 h-16"
+              data-aos="flip-left"
+            />
             <p>{item.text}</p>
           </div>
         ))}

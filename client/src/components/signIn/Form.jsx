@@ -8,11 +8,9 @@ const Form = () => {
   const [btn, setBtn] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginData, setLoginData] = useState({
-    email: '',
-    password: ''
-  })
-
-
+    email: "",
+    password: "",
+  });
 
   const navigate = useNavigate();
 
@@ -22,35 +20,31 @@ const Form = () => {
 
   const LoginForm = async (e) => {
     e.preventDefault();
-    const { email, password } = loginData
+    const { email, password } = loginData;
     try {
-      setLoading(true)
+      setLoading(true);
 
-      const { data } = await axios.post('/api/auth/login', {
+      const { data } = await axios.post("/api/auth/login", {
         email,
-        password
-      })
+        password,
+      });
       if (data.error) {
-        toast.error(data.error)
-      }
-      else {
-        toast.success("Login Successfull ! Welcome")
+        toast.error(data.error);
+      } else {
+        toast.success("Login Successfull ! Welcome");
         // Clear the form data
-        setLoginData({ email: '', password: '' });
+        setLoginData({ email: "", password: "" });
 
         setTimeout(() => {
-          navigate('/')
+          navigate("/");
         }, 2000);
-        setLoading(false)
+        setLoading(false);
       }
-
     } catch (error) {
-      setLoading(false)
-      console.log(error)
+      setLoading(false);
+      console.log(error);
     }
-  }
-
-
+  };
 
   return (
     <>
@@ -72,12 +66,16 @@ const Form = () => {
                   </p>
                 </div>
                 <form
-                  onSubmit={LoginForm} action="#" method="POST"
+                  onSubmit={LoginForm}
+                  action="#"
+                  method="POST"
                   className="flex flex-col gap-5 md:justify-start md:items-start justify-center items-start md:w-[90%] w-full"
                 >
                   <input
                     value={loginData.email}
-                    onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+                    onChange={(e) =>
+                      setLoginData({ ...loginData, email: e.target.value })
+                    }
                     type="email"
                     placeholder="Enter Your Email"
                     required
@@ -86,7 +84,9 @@ const Form = () => {
                   <input
                     type="password"
                     value={loginData.password}
-                    onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+                    onChange={(e) =>
+                      setLoginData({ ...loginData, password: e.target.value })
+                    }
                     placeholder="Enter your password"
                     required
                     className="outline-none border-2 border-[#8D8D8D] shadow-md focus:shadow-xl transition-all duration-300 ease-in-out rounded-[12px] p-3 w-[90%]"
@@ -112,8 +112,9 @@ const Form = () => {
                   </div>
                   <button
                     type="submit"
-                    className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
-                    {loading ? 'Loading...' : 'Sign In'}
+                    className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out"
+                  >
+                    {loading ? "Loading..." : "Sign In"}
                     <svg
                       width="20"
                       height="19"

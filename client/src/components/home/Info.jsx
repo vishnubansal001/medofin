@@ -8,7 +8,10 @@ const Info = () => {
           <img src={logo} alt="" />
         </div>
         <div className="flex flex-col justify-start items-start gap-3">
-          <h1 className="lg:text-3xl md:text-2xl text-xl font-lime font-semibold" data-aos="zoom-in">
+          <h1
+            className="lg:text-3xl md:text-2xl text-xl font-lime font-semibold"
+            data-aos="zoom-in"
+          >
             Medofin
           </h1>
           <p className="lg:text-xl text-base font-Inter" data-aos="zoom-in-up">

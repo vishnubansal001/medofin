@@ -39,7 +39,7 @@ const Slide = () => {
       >
         {slide?.map((item, ind) => (
           <SwiperSlide key={ind}>
-            <img src={item} alt="" data-aos="flip-right"/>
+            <img src={item} alt="" data-aos="flip-right" />
           </SwiperSlide>
         ))}
       </Swiper>

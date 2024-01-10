@@ -38,7 +38,9 @@ const CheckUp = () => {
                   {item.disc}
                 </p>
               </div>
-              <button className="bg-[#28661E] rounded-[14px] md:text-lg font-semibold text-base text-white px-3 py-2">{item.btn}</button>
+              <button className="bg-[#28661E] rounded-[14px] md:text-lg font-semibold text-base text-white px-3 py-2">
+                {item.btn}
+              </button>
             </div>
           </div>
         ))}

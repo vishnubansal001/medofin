@@ -12,7 +12,11 @@ const Freq = () => {
           </div>
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:w-[70%] md:w-[80%] w-[90%] gap-y-16">
             {freq?.map((item, index) => (
-              <div key={index} data-aos="flip-right" className="flex flex-col gap-4 w-[90%]">
+              <div
+                key={index}
+                data-aos="flip-right"
+                className="flex flex-col gap-4 w-[90%]"
+              >
                 <h2 className="lg:text-xl font-Inter text-lg font-semibold">
                   {item.que}
                 </h2>

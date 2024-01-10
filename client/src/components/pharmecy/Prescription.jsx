@@ -12,15 +12,22 @@ const Prescription = () => {
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-12 sm:gap-16 w-full max-w-6xl -mt-[4rem] p-2">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <img src={video} alt="video" className="w-[30rem] h-auto" data-aos="flip-right"/>
+            <img
+              src={video}
+              alt="video"
+              className="w-[30rem] h-auto"
+              data-aos="flip-right"
+            />
             {/* <video src="https://www.youtube.com/watch?v=9XwazFkzX9k" controls className="w-full h-full"/> */}
           </div>
           <div className="flex items-center justify-center flex-col rounded-lg bg-white shadow w-full h-full">
-          <label htmlFor="prescriptionInput" className="bg-black text-white p-6 rounded-br-xl rounded-bl-xl">
-                  Order with Prescription
-                </label>
+            <label
+              htmlFor="prescriptionInput"
+              className="bg-black text-white p-6 rounded-br-xl rounded-bl-xl"
+            >
+              Order with Prescription
+            </label>
             <div className="w-full h-full p-8 px-14 text-white rounded-lg shadow-lg flex items-center justify-center gap-4 flex-col">
-              
               <div className="mb-4 relative w-full h-full border border-dashed border-green-500 bg-opacity-20 bg-green-500 flex items-center justify-center text-black rounded-xl">
                 <p>Upload Prescription</p>
                 <input
@@ -49,7 +56,7 @@ const Prescription = () => {
                 type="button"
                 className="bg-[#28661e] hover:bg-[#28661e] text-white py-2 px-8 rounded-full flex items-center justify-center gap-2"
               >
-                <IoIosCloudUpload size={15}/>
+                <IoIosCloudUpload size={15} />
                 Upload File
               </button>
             </div>

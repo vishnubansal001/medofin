@@ -26,13 +26,22 @@ const Navbar = () => {
             <img src={logo} alt="img/logo png" className="w-16" />
           </div>
           <div className="flex flex-row gap-8 items-center">
-            <Link to="/" className="lg:text-lg text-base cursor-pointer select-none">
+            <Link
+              to="/"
+              className="lg:text-lg text-base cursor-pointer select-none"
+            >
               Home
             </Link>
-            <Link to="/pharmacy" className="lg:text-lg text-base cursor-pointer select-none">
+            <Link
+              to="/pharmacy"
+              className="lg:text-lg text-base cursor-pointer select-none"
+            >
               Pharmacy
             </Link>
-            <Link to="/products" className="lg:text-lg text-base cursor-pointer select-none">
+            <Link
+              to="/products"
+              className="lg:text-lg text-base cursor-pointer select-none"
+            >
               Medicines
             </Link>
             <Link className="lg:text-lg text-base cursor-pointer select-none">
@@ -96,10 +105,11 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: isSidebarOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`${isSidebarOpen
-            ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
-            : ""
-            }`}
+          className={`${
+            isSidebarOpen
+              ? "h-full w-screen backdrop-blur-sm absolute top-0 left-0 z-[90]"
+              : ""
+          }`}
         ></motion.div>
         <motion.div
           initial={{ x: "100%" }}

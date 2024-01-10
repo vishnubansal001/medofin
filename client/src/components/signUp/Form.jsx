@@ -3,20 +3,26 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { FormControl, InputLabel, MenuItem, Select, Box } from "@material-ui/core";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Box,
+} from "@material-ui/core";
 
 const Form = () => {
   const [btn, setBtn] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
 
   const [data, setData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    role: ''
-  })
+    name: "",
+    email: "",
+    password: "",
+    role: "",
+  });
 
   const onclick = () => {
     setBtn(!btn);
@@ -25,7 +31,7 @@ const Form = () => {
   const handleChange = (event) => {
     setRole(event.target.value);
     setData({ ...data, role: event.target.value });
-  }
+  };
 
   const RegisterForm = async (e) => {
     e.preventDefault();
@@ -33,11 +39,11 @@ const Form = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post('/api/auth/register', {
+      const { data } = await axios.post("/api/auth/register", {
         name,
         email,
         password,
-        role
+        role,
       });
 
       if (data.error) {
@@ -47,14 +53,14 @@ const Form = () => {
         toast.success(data.message);
         // Clear the form data
         setData({
-          name: '',
-          email: '',
-          password: '',
-          role: ''
+          name: "",
+          email: "",
+          password: "",
+          role: "",
         });
 
         setTimeout(() => {
-          navigate('/sign-in');
+          navigate("/sign-in");
         }, 2000);
 
         setLoading(false);
@@ -63,7 +69,7 @@ const Form = () => {
       setLoading(false);
       console.log(error);
     }
-  }
+  };
 
   return (
     <>
@@ -100,14 +106,18 @@ const Form = () => {
                   <input
                     type="email"
                     value={data.email}
-                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                    onChange={(e) =>
+                      setData({ ...data, email: e.target.value })
+                    }
                     required
                     placeholder="Enter Your Email"
                     className="outline-none border-2 border-[#8D8D8D] shadow-md focus:shadow-xl transition-all duration-300 ease-in-out rounded-[12px] p-3 w-[90%]"
                   />
                   <input
                     value={data.password}
-                    onChange={(e) => setData({ ...data, password: e.target.value })}
+                    onChange={(e) =>
+                      setData({ ...data, password: e.target.value })
+                    }
                     type="password"
                     required
                     placeholder="Password"
@@ -134,7 +144,9 @@ const Form = () => {
                     <div className="w-[19%]">
                       <Box border="1px solid black" sx={{ minWidth: 140 }}>
                         <FormControl fullWidth>
-                          <InputLabel id="demo-simple-select-label">Role</InputLabel>
+                          <InputLabel id="demo-simple-select-label">
+                            Role
+                          </InputLabel>
                           <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
@@ -152,8 +164,9 @@ const Form = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out">
-                    {loading ? 'Loading...' : 'Sign Up'}
+                    className="md:w-[90%] flex flex-row justify-center items-center gap-1 w-full uppercase text-white font-bold lg:text-lg md:text-base text-sm py-3 bg-[#28661E] rounded-[20px] shadow-md hover:shadow-lg cursor-pointer text-center transition-all duration-300 ease-in-out"
+                  >
+                    {loading ? "Loading..." : "Sign Up"}
                     <svg
                       width="20"
                       height="19"
@@ -181,7 +194,10 @@ const Form = () => {
 
                 <p className="flex flex-row gap-2  text-[#525252] lg:text-base text-sm">
                   Already have an account?
-                  <span onClick={() => navigate('/sign-in')} className="text-[#28661E] font-semibold underline">
+                  <span
+                    onClick={() => navigate("/sign-in")}
+                    className="text-[#28661E] font-semibold underline"
+                  >
                     Sign In
                   </span>
                 </p>

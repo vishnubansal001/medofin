@@ -1,8 +1,6 @@
 "use client";
 import { Typography, Avatar } from "@material-tailwind/react";
-import Logo from '../../assets/Logo.png'
-
-
+import Logo from "../../assets/Logo.png";
 
 const SITEMAP = [
   {
@@ -43,12 +41,10 @@ export default function Footer() {
               </p>
             </div>
             <p className="w-3/4 text-base text-[#a9a9a9]">
-              Meet Medofin! We’re here to revolutionize healthcare and bring your clinic experience online.
+              Meet Medofin! We’re here to revolutionize healthcare and bring
+              your clinic experience online.
             </p>
-            <div className=" flex p-[1rem] justify-between align-middle items-center gap-2">
-
-
-            </div>
+            <div className=" flex p-[1rem] justify-between align-middle items-center gap-2"></div>
           </div>
 
           {SITEMAP.map(({ title, links }, key) => (
@@ -82,8 +78,7 @@ export default function Footer() {
           variant="small"
           className="mb-4 text-center font-normal text-white md:mb-0"
         >
-          &copy; {currentYear} <a href="#">Medofin</a>. All Rights
-          Reserved.
+          &copy; {currentYear} <a href="#">Medofin</a>. All Rights Reserved.
         </Typography>
       </div>
     </footer>

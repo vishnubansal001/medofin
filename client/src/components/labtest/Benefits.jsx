@@ -14,7 +14,11 @@ const Benefits = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
           <div className="lg:col-span-2 col-span-1 gap-4 flex flex-col">
             {bene?.map((item, ind) => (
-              <div key={ind} className="flex flex-row items-center gap-3" data-aos="flip-right">
+              <div
+                key={ind}
+                className="flex flex-row items-center gap-3"
+                data-aos="flip-right"
+              >
                 <p className="h-14 flex flex-col justify-center items-center text-center bg-[#F1F3F7] rounded-full w-14">
                   {ind + 1}
                 </p>
@@ -26,7 +30,9 @@ const Benefits = () => {
             ))}
           </div>
           <div className="gap-4 flex flex-col">
-            <h1 className="lg:text-xl text-lg font-semibold">Why book lab tests with Medofin?</h1>
+            <h1 className="lg:text-xl text-lg font-semibold">
+              Why book lab tests with Medofin?
+            </h1>
             <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
               <div>
                 <h1>Fast &</h1>
