@@ -1,6 +1,8 @@
 import feel from "../../assets/feel.png";
+import { useNavigate } from "react-router-dom";
 
 const Spec = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex flex-col justify-center items-center lg:px-20 pb-10 px-10">
       <div className="flex lg:flex-row flex-col w-full gap-10">
@@ -15,7 +17,10 @@ const Spec = () => {
             healthcare products, you can rest assured when you buy from Medofin
             Pharmacy.
           </p>
-          <button className="bg-[#D9D9D9] rounded-full px-8 py-3 text-[#000000] font-semibold">
+          <button
+            onClick={() => navigate("/products")}
+            className="bg-[#D9D9D9] hover:bg-[#c4c4c4] transition-all ease-in-out duration-300 rounded-full px-8 py-3 text-[#000000] font-semibold"
+          >
             Explore Now
           </button>
         </div>

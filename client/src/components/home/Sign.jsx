@@ -1,9 +1,9 @@
-import envelop from '../../assets/enevloper.png'
+import envelop from "../../assets/enevloper.png";
 
 const Sign = () => {
   return (
-    <div className="flex w-full items-center justify-center relative min-h-[100dvh] overflow-y-hidden">
-      <div className='mx-auto bg-transparent absolute z-[9] opacity-[1.7]'>
+    <div className="flex w-full items-center justify-center relative min-h-[100vh] overflow-y-hidden">
+      <div className="mx-auto bg-transparent absolute z-[9] opacity-[1.7]">
         <div className="flex bg-black subs items-center justify-center p-[5rem] flex-col m-l-2rem gap-8 w-[75%] m-auto rounded-[2rem]">
           <h3 className="text-1xl font-bold text-[#6ecf6b] tracking-widest uppercase">
             Subscribe to our newsletter
@@ -15,9 +15,16 @@ const Sign = () => {
             <div className="rounded-[1rem] bg-white h-16 font-bold text-gray-700 text-2xl flex items-center justify-center py-4 px-4 w-1/2">
               {/* <FontAwesomeIcon icon={faEnvelope} className="mr-4 bg-transparent" /> */}
               <img src={envelop} className="mr-4 bg-transparent" alt="" />
-              <input type="text" id="user-email" className="h-full w-full bg-transparent outline-none placeholder-gray-700 placeholder:font-semibold" placeholder="Your Email" />
+              <input
+                type="text"
+                id="user-email"
+                className="h-full w-full bg-transparent outline-none placeholder-gray-700 placeholder:font-semibold"
+                placeholder="Your Email"
+              />
             </div>
-            <button className="rounded-[1rem] bg-[#5d50c6] border-spacing-1 hover:bg-[#7565ec] text-white text-2xl py-4 px-6">Subscribe</button>
+            <button className="rounded-[1rem] bg-[#5d50c6] border-spacing-1 hover:bg-[#7565ec] transition-all duration-300 ease-in-out text-white text-2xl py-4 px-6">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>

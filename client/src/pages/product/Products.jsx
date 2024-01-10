@@ -16,10 +16,10 @@ import { Footer } from "../../components/home";
 import coldProduct from "../../assets/coldProduct.png";
 import topsell from "../../assets/topsell.png";
 import health from "../../assets/health.png";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import "swiper/swiper-bundle.css";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   { image: image2 },
@@ -166,20 +166,27 @@ const topsellProducts = [
 ];
 
 const Products = () => {
+  const navigate = useNavigate();
   SwiperCore.use([Navigation, Pagination]);
   return (
     <>
       <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-white/50 backdrop-blur-sm bg-clip">
         <nav className="flex items-center justify-center w-full flex-col gap-2">
           <div className="flex items-center justify-between px-6 py-3 border-[#dfdfdf] border-b w-full">
-            <div className="flex items-center justify-center gap-2" >
+            <div className="flex items-center justify-center gap-2">
               <img src={logo} alt="logo" className="w-12 h-12" />
               <p className="font-lime text-base sm:flex hidden">Medofin</p>
             </div>
-            <NavLink to="/" className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
+            <NavLink
+              to="/"
+              className="text-xs s:text-sm sm:text-base font-normal font-popp text-black"
+            >
               Home
             </NavLink>
-            <NavLink to="/labs" className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
+            <NavLink
+              to="/labs"
+              className="text-xs s:text-sm sm:text-base font-normal font-popp text-black"
+            >
               LabTest
             </NavLink>
             <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
@@ -197,7 +204,10 @@ const Products = () => {
                 <FaSearch className="text-gray-500" />
               </div>
             </div>
-            <button className="bg-[#28661E] text-white px-5 py-2">
+            <button
+              onClick={() => navigate("/cart")}
+              className="bg-[#28661E] text-white px-5 py-2"
+            >
               View Cart
             </button>
           </div>
@@ -235,7 +245,10 @@ const Products = () => {
                     key={index}
                     className="s:p-4 xs:p-7 p-4 flex items-center justify-center"
                   >
-                    <div data-aos="flip-right" className="flex items-center justify-center p-4 bg-[#28661e] md:w-[95%] h-72 rounded-lg">
+                    <div
+                      data-aos="flip-right"
+                      className="flex items-center justify-center p-4 bg-[#28661e] md:w-[95%] h-72 rounded-lg"
+                    >
                       <img
                         src={item.image}
                         alt={`Image ${index + 1}`}
@@ -395,14 +408,34 @@ const Products = () => {
           <div className="flex items-center justify-center w-full h-full">
             <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center">
               <div className="flex items-center justify-center flex-col gap-4 text-white h-full bg-[#28661E] w-full p-12 sm:p-16 md:p-24 lg:p-32">
-                <div className="flex items-start w-full justify-start font-Inter" data-aos="flip-left">
-                  <h1 className="text-2xl lg:text-4xl">Your health, made affordable</h1>
+                <div
+                  className="flex items-start w-full justify-start font-Inter"
+                  data-aos="flip-left"
+                >
+                  <h1 className="text-2xl lg:text-4xl">
+                    Your health, made affordable
+                  </h1>
                 </div>
-                <div className="lg:text-base text-sm flex items-center justify-start font-Inter" data-aos="flip-right">
-                  <p> At Medofin, we believe everyone deserves access to quality medication at fair prices. We cut out unnecessary costs and partner directly with manufacturers to bring you the savings you need. So whether you&apos;re refilling a prescription or trying a new supplement, you can feel confident knowing you&apos;re getting the best value for your health. With Medofine, staying healthy is always within reach.</p>
+                <div
+                  className="lg:text-base text-sm flex items-center justify-start font-Inter"
+                  data-aos="flip-right"
+                >
+                  <p>
+                    {" "}
+                    At Medofin, we believe everyone deserves access to quality
+                    medication at fair prices. We cut out unnecessary costs and
+                    partner directly with manufacturers to bring you the savings
+                    you need. So whether you&apos;re refilling a prescription or
+                    trying a new supplement, you can feel confident knowing
+                    you&apos;re getting the best value for your health. With
+                    Medofine, staying healthy is always within reach.
+                  </p>
                 </div>
               </div>
-              <div className="w-full h-full flex items-center justify-center" data-aos="flip-left">
+              <div
+                className="w-full h-full flex items-center justify-center"
+                data-aos="flip-left"
+              >
                 <img src={health} alt="heath" className="w-full h-full" />
               </div>
             </div>
@@ -461,7 +494,10 @@ const Products = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center gap-3 font-Inter w-full">
-                <button className="bg-[#28661E] text-white px-4 py-2 uppercase text-sm">
+                <button
+                  onClick={() => navigate("/exp")}
+                  className="bg-[#28661E] text-white px-4 py-2 uppercase text-sm"
+                >
                   ask your pharmacist
                 </button>
               </div>

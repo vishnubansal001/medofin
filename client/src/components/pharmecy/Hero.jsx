@@ -7,7 +7,10 @@ const Hero = () => {
       style={{ backgroundImage: `url(${bgg})` }}
     >
       <div className="flex flex-col justify-center items-center w-full gap-10 min-h-[40vh]">
-        <h1 className="font-lime lg:text-7xl md:text-6xl text-4xl text-[#28661E]" data-aos="flip-right">
+        <h1
+          className="font-lime lg:text-7xl md:text-6xl text-4xl text-[#28661E]"
+          data-aos="flip-right"
+        >
           Medofin Pharmacy
         </h1>
       </div>
@@ -15,12 +18,15 @@ const Hero = () => {
         <h1 className="lg:text-3xl md:text-2xl text-xl font-semibold font-lime">
           Order Now!
         </h1>
-        <p className="lg:w-[70%] md:w-[85%] w-[90%] md:text-lg text-base" data-aos="flip-left">
+        <p
+          className="lg:w-[70%] md:w-[85%] w-[90%] md:text-lg text-base"
+          data-aos="flip-left"
+        >
           Experience the ease of accessing quality healthcare and medications
           without the need to navigate through aisles. Medofin brings the
           convenience of top-notch healthcare directly to your doorstep.
         </p>
-        <button className="bg-[#28661E] rounded-full px-8 py-3 text-white">
+        <button className="bg-[#28661E] rounded-full px-8 py-3 text-white transition-all duration-300 ease-in-out hover:bg-[#3f8f32]">
           Start Scrolling
         </button>
       </div>
