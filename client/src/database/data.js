@@ -23,6 +23,15 @@ import d1 from "../assets/d1.png";
 import d2 from "../assets/d2.png";
 import d3 from "../assets/d3.png";
 import d4 from "../assets/d4.png";
+import f1 from "../assets/f1.png";
+import f2 from "../assets/f2.png";
+import f3 from "../assets/f3.png";
+import f4 from "../assets/f4.png";
+import f5 from "../assets/f5.png";
+import l1 from "../assets/l1.png";
+import l2 from "../assets/l2.png";
+import l3 from "../assets/l3.png";
+import l4 from "../assets/l4.png";
 
 export const techno = [
   {
@@ -202,38 +211,40 @@ export const freq = [
   },
 ];
 
-
 export const doctors = [
   {
-    id: '01',
-    name: 'Dr. Rajesh Kumar',
-    specialization: 'General Physician',
+    id: "01",
+    name: "Dr. Rajesh Kumar",
+    specialization: "General Physician",
     avgRating: 4.5,
     totalRating: 200,
-    photo: 'https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.webp?b=1&s=170667a&w=0&k=20&c=3GoWF_QG3WZoJK6CJWWY9Cxt5s6O-0I6qrU1QCnloKA=',
+    photo:
+      "https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.webp?b=1&s=170667a&w=0&k=20&c=3GoWF_QG3WZoJK6CJWWY9Cxt5s6O-0I6qrU1QCnloKA=",
     totalPatients: 1500,
-    hospital: 'Apollo Hospital New Delhi',
+    hospital: "Apollo Hospital New Delhi",
   },
   {
-    id: '02',
-    name: 'Dr. Sanjeev Sharma',
-    specialization: 'Orthopedic',
+    id: "02",
+    name: "Dr. Sanjeev Sharma",
+    specialization: "Orthopedic",
     avgRating: 4.9,
     totalRating: 290,
-    photo: 'https://i.pinimg.com/736x/df/3a/fd/df3afdcc8dea03631f892f31eded8202.jpg',
+    photo:
+      "https://i.pinimg.com/736x/df/3a/fd/df3afdcc8dea03631f892f31eded8202.jpg",
     totalPatients: 1500,
-    hospital: ' IGMC Hospital Shimla',
+    hospital: " IGMC Hospital Shimla",
   },
   {
-    id: '03',
-    name: 'Dr. Shivani Dhiman',
-    specialization: 'OPD Doctor',
+    id: "03",
+    name: "Dr. Shivani Dhiman",
+    specialization: "OPD Doctor",
     avgRating: 5.0,
     totalRating: 400,
-    photo: 'https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=ais',
+    photo:
+      "https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=ais",
     totalPatients: 1500,
-    hospital: 'PGI Hospital Chandigarh',
-  }
+    hospital: "PGI Hospital Chandigarh",
+  },
 ];
 
 export const faqs = [
@@ -249,17 +260,142 @@ export const faqs = [
   },
   {
     question: "What about non-prescription drugs?",
-    content:
-      "Absolutely! You can order over the counter products.",
+    content: "Absolutely! You can order over the counter products.",
   },
   {
     question: "How to return a product?",
-    content:
-      "You can return the product within 30 days of purchase.",
+    content: "You can return the product within 30 days of purchase.",
   },
   {
     question: "Does you provide urgent care?",
     content:
       "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+  },
+];
+
+export const disgnostic = [
+  {
+    name: "Thyroid Profile",
+    t1: "Known as Thyroid Profile Total",
+    t2: "Blood",
+    head: "E-Reports in 2 days",
+    price: "₹400",
+    btn: "ADD",
+  },
+  {
+    name: "Complete Blood Count",
+    t1: "Known as Complete Blood",
+    t2: "Count Automated Blood",
+    head: "E-Reports on next day",
+    price: "₹400",
+    btn: "ADD",
+  },
+  {
+    name: "Lipid Profile",
+    t1: "Known as Lipid Profile Blood",
+    head: "E-Reports in 2 days",
+    price: "₹400",
+    btn: "ADD",
+  },
+  {
+    name: "Liver Function Test",
+    t1: "Known as Liver Function Tests",
+    t2: "Blood",
+    head: "E-Reports in 2 days",
+    price: "₹400",
+    btn: "ADD",
+  },
+  {
+    name: "HbA1c",
+    t1: "Known as Glycosylated",
+    t2: "Haemoglobin Blood",
+    head: "E-Reports in 2 days",
+    price: "₹400",
+    btn: "ADD",
+  },
+];
+
+export const health = [
+  {
+    name: "Fever",
+    img: f5,
+  },
+  {
+    name: "Diabetes",
+    img: f3,
+  },
+  {
+    name: "Skin",
+    img: f4,
+  },
+  {
+    name: "Kidney",
+    img: f2,
+  },
+  {
+    name: "Digestion",
+    img: f1,
+  },
+];
+
+export const checkup = [
+  {
+    name: "Full Blood Count",
+    text: "Ideal for general body conditions",
+    t1: "Schedule your Test",
+    img: l1,
+    price: "₹1999",
+    cPrice: "₹2800",
+    disc: "29% off",
+    btn: "Book Now",
+  },
+  {
+    name: "Calcium Blood Test",
+    text: "Ideal for knowing calcium levels in blood",
+    t1: "Schedule your Test",
+    img: l2,
+    price: "₹1199",
+    cPrice: "₹1299",
+    disc: "8% off",
+    btn: "Book Now",
+  },
+  {
+    name: "Cholesterol and Lipid Test",
+    text: "Ideal for knowing cholesterol levels in blood",
+    t1: "Schedule your Test",
+    img: l3,
+    price: "₹1099",
+    cPrice: "₹1199",
+    disc: "8% off",
+    btn: "Book Now",
+  },
+  {
+    name: "Blood Glucose Test",
+    text: "Ideal for monitoring diabetes ",
+    t1: "Schedule your Test",
+    img: l4,
+    price: "₹1099",
+    cPrice: "₹1199",
+    disc: "8% off",
+    btn: "Book Now",
+  },
+];
+
+export const bene = [
+  {
+    que: "Vaccinated Phlebotomists",
+    ans: "Only phlebotomists who have been vaccinated are assigned tasks.",
+  },
+  {
+    que: "Maintains Safety Protocols",
+    ans: "The phlebotomist adheres to safety protocols by wearing a mask, face shield, and gloves. Additionally, they sanitize themselves before going to the designated location. ",
+  },
+  {
+    que: "Sample collection",
+    ans: "Phlebotomists who have received vaccinations collect blood samples using a syringe and transfer them into barcoded vials for proper identification. ",
+  },
+  {
+    que: "Accurate Digital Reports",
+    ans: "Phlebotomists, having been vaccinated, gather blood samples using a syringe and subsequently transfer them into vials with barcodes to ensure accurate identification. ",
   },
 ];

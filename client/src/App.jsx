@@ -8,6 +8,7 @@ import Experience from "./pages/experience/Experience";
 import Products from "./pages/product/Products";
 import Pharmacy from "./pages/pharmacy/Pharmacy";
 import Cart from "./pages/cart/Cart";
+import LabTest from "./pages/labtest/LabTest";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products" element={<Products />}></Route>
         <Route path="/pharmacy" element={<Pharmacy />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/lab-test" element={<LabTest />}></Route>
       </Routes>
     </>
   );
