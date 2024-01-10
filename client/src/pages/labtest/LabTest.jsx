@@ -36,8 +36,8 @@ const LabTest = () => {
         </nav>
       </header>
       <div className="flex fixed z-10 mt-[4.5rem] items-center justify-between px-12 py-2 md:flex-row flex-col w-full bg-white bg-opacity-50 gap-2">
-        <div className="flex md:flex-row flex-col gap-3 border rounded-lg md:w-[85%] w-full">
-          <div className="relative w-full md:w-[30rem]">
+        <div className="flex md:flex-row flex-col gap-3 rounded-lg md:w-[85%] w-full">
+          <div className="relative w-full md:w-[30rem] border">
             <input
               type="text"
               placeholder="Search for Place"
@@ -47,7 +47,7 @@ const LabTest = () => {
               <FaSearch className="text-gray-500" />
             </div>
           </div>
-          <div className="relative w-full md:w-[30rem]">
+          <div className="relative w-full md:w-[30rem] border">
             <input
               type="text"
               placeholder="Search for tests, packages and profiles"

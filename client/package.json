@@ -25,7 +25,8 @@
     "react-router-dom": "^6.21.1",
     "remove": "^0.1.5",
     "styled-components": "^6.1.6",
-    "swiper": "^9.4.1"
+    "swiper": "^9.4.1",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",

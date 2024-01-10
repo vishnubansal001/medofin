@@ -19,6 +19,8 @@ import health from "../../assets/health.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.css";
+import { useEffect, useState } from "react";
+import { useCartStore, useProductsStore } from "../../store/masterStore";
 import { useNavigate } from "react-router-dom";
 
 const data = [
@@ -79,7 +81,6 @@ const products = [
     price: 49.0,
   },
 ];
-
 const minerals = [
   {
     id: 1,
@@ -166,7 +167,34 @@ const topsellProducts = [
 ];
 
 const Products = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState(products);
   const navigate = useNavigate();
+  // const {products,minerals,coldfever,topsellProducts} = useProductsStore(); zustand is added in masterStore.js you can apply it here by removing comment and default state
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const handleAddToCart = (item) => {
+    addToCart(item);
+    console.log("Item added to cart:", item);
+  };
+
+  const fetchData = useProductsStore((state) => state.fetchData);
+
+  useEffect(() => {
+    fetchData("/api/products");
+    fetchData("/api/minerals");
+    fetchData("/api/coldfever");
+    fetchData("/api/topsellProducts");
+  }, []);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    const filtered = products.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  };
+
   SwiperCore.use([Navigation, Pagination]);
   return (
     <>
@@ -198,6 +226,8 @@ const Products = () => {
               <input
                 type="text"
                 placeholder="Search for medicines, health products and more"
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
                 className="py-2 pl-8 pr-4 w-full rounded-md border border-gray-300 focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-200"
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -265,7 +295,7 @@ const Products = () => {
           <div className="flex items-center justify-center p-2 max-w-screen-xl mx-auto w-full">
             <div className="flex flex-col items-center justify-center gap-14 w-full">
               <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                {products.map((item, index) => (
+                {filteredProducts.map((item, index) => (
                   <div
                     key={index}
                     data-aos="flip-left"
@@ -281,7 +311,10 @@ const Products = () => {
                       <div className="text-[#28661E] font-semibold">
                         Rs. {item.price}
                       </div>
-                      <button className="bg-[#D9D9D9] text-black rounded-full px-6 py-2">
+                      <button
+                        onClick={() => handleAddToCart(item)}
+                        className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
+                      >
                         Add to Cart
                       </button>
                     </div>
