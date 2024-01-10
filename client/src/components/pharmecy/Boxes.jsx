@@ -7,7 +7,7 @@ const Boxes = () => {
         {ee.map((item, ind) => (
           <div key={ind} className="justify-center flex flex-col items-center">
             <div className="lg:w-[80%] md:w-[85%] w-full flex flex-col gap-6">
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="" data-aos="zoom-in-down"/>
               <div className="flex flex-col gap-3">
                 <h1 className="lg:text-2xl text-xl font-semibold">
                   {item.name}

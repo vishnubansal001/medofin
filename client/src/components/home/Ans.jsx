@@ -7,7 +7,7 @@ const Ans = () => {
         <section>
             <div className=" py-9 container">
                 <div className="flex justify-between gap-[50px] lg:gap-0">
-                    <div className="w-1/2 hidden md:block">
+                    <div className="w-1/2 hidden md:block" data-aos="flip-right">
                         <img src={Faq} alt="" />
                     </div>
 

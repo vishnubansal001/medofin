@@ -16,6 +16,7 @@ const Blog = () => {
             className={`lg:h-[30rem] lg:flex w-full ${
               index % 2 != 0 ? "items-end" : "items-start"
             }`}
+            data-aos="zoom-in-down"
           >
             <div
               style={{ backgroundImage: `url(${item.img})` }}

@@ -24,17 +24,17 @@ const Labs = () => {
           <div className="flex items-center justify-center  w-full">
             <div className="flex flex-col items-center justify-center gap-24">
               <div className="flex flex-col items-center justify-center pt-[12rem] gap-24 h-full">
-                <h1 className="text-3xl font-lime sm:text-6xl xl:text-9xl font-medium text-white max-w-6xl text-center mx-auto">
+                <h1 data-aos="flip-right" className="text-3xl font-lime sm:text-6xl xl:text-9xl font-medium text-white max-w-6xl text-center mx-auto">
                   Medofin
                   <br /> Labs
                 </h1>
-                <p className="text-2xl font-semibold font-mons text-white max-w-3xl text-center mx-auto">
+                <p data-aos="flip-left" className="text-2xl font-semibold font-mons text-white max-w-3xl text-center mx-auto">
                   A new era of health care powered by Medofin. We combine
                   state-of-the-art lab facilities with an intuitive online
                   interface to deliver fast, accurate and hassle-free testing.
                 </p>
               </div>
-              <div className="flex items-center justify-center w-full h-full">
+              <div className="flex items-center justify-center w-full h-full" data-aos="zoom-in">
                 <img src={labHero} alt="labHero" className="w-full h-full" />
               </div>
             </div>
@@ -44,14 +44,14 @@ const Labs = () => {
         <section className="flex items-center justify-center py-4 flex-col">
           <div className="w-full flex flex-col justify-center items-center lg:px-20 lg:pb-20 pb-10 px-10 relative overflow-hidden">
             <div className="w-full flex flex-col gap-12 justify-center items-center">
-              <div className="lg:w-[70%] md:w-[80%] w-[90%] flex items-start justify-start">
+              <div data-aos="zoom-in-up" className="lg:w-[70%] md:w-[80%] w-[90%] flex items-start justify-start">
                 <h1 className="lg:text-5xl font-lime md:text-3xl sm:text-2xl text-xl font-semibold">
                   Why Medofin?
                 </h1>
               </div>
               <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:w-[70%] md:w-[80%] w-[90%] gap-16">
                 {Labques?.map((item, index) => (
-                  <div key={index} className="flex flex-col gap-3 w-[90%]">
+                  <div key={index} className="flex flex-col gap-3 w-[90%]" data-aos="zoom-in-down">
                     <h2 className="lg:text-xl font-bold font-Inter text-lg">{item.que}</h2>
                     <p className="lg:text-base font-dmSans text-sm">{item.ans}</p>
                   </div>

@@ -10,7 +10,7 @@ const Spec = () => {
             <h1 className="lg:text-4xl md:text-3xl text-xl">Feel better And</h1>
             <h1 className="lg:text-4xl md:text-3xl text-xl">Rest Assured</h1>
           </div>
-          <p className="text-[#727272] lg:text-lg ">
+          <p className="text-[#727272] lg:text-lg" data-aos="zoom-in">
             With our commitment to providing safe and effective medical and
             healthcare products, you can rest assured when you buy from Medofin
             Pharmacy.

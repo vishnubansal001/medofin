@@ -31,7 +31,7 @@ const Health = () => {
           {health?.map((item, ind) => (
             <SwiperSlide key={ind}>
               <div className="flex flex-col gap-3 items-center justify-center w-full">
-                <img src={item.img} alt="" className="" />
+                <img src={item.img} alt="" className="" data-aos="zoom-in"/>
                 <p>{item.name}</p>
               </div>
             </SwiperSlide>

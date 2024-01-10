@@ -17,7 +17,7 @@ const LabTest = () => {
       <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-[#28661E] h-[4.5rem] backdrop-blur-sm bg-clip">
         <nav className="flex items-center justify-center w-full flex-col gap-2">
           <div className="flex items-center justify-between px-6 py-3 border-[#dfdfdf] border-b w-full">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2" >
               <img src={logo} alt="logo" className="w-12 h-12" />
               <p className="font-lime sm:flex hidden text-2xl text-white">
                 Medofin

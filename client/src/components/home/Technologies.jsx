@@ -18,14 +18,14 @@ const Technologies = ({techno}) => {
               } md:w-[70%] w-[90%] gap-10 justify-center items-center`}
             >
               <div className="lg:w-[50%] flex flex-col gap-4">
-                <h1 className="lg:text-3xl font-lime md:text-2xl text-xl font-bold z-[100]">
+                <h1 className="lg:text-3xl font-lime md:text-2xl text-xl font-bold z-[100]" data-aos="zoom-in">
                   {item.heading}
                 </h1>
-                <p className="lg:text-xl font-inter font-medium md:text-lg text-base z-[100]">
+                <p className="lg:text-xl font-inter font-medium md:text-lg text-base z-[100]" data-aos="zoom-in-up">
                   {item.text}
                 </p>
               </div>
-              <div className="lg:w-[50%] z-[100]">
+              <div className="lg:w-[50%] z-[100]" data-aos="zoom-in-down">
                 <img src={item.img} alt="" />
               </div>
             </div>

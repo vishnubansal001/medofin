@@ -9,8 +9,8 @@ const Hero = () => {
       style={{ backgroundImage: `url(${hee})`, backgroundPosition: "right" }}
     >
       <div className="flex md:flex-row flex-col gap-10">
-        <img src={s1} alt="" className="w-96 h-96" />
-        <img src={s2} alt="" className="w-96 h-96" />
+        <img src={s1} alt="" className="w-96 h-96" data-aos="flip-right"/>
+        <img src={s2} alt="" className="w-96 h-96" data-aos="flip-left"/>
       </div>
     </div>
   );

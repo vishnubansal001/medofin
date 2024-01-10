@@ -26,7 +26,7 @@ const Testimonials = () => {
                 }}
             >
                 <SwiperSlide>
-                    <div className='py-[30px] px-5 rounded-3'>
+                    <div className='py-[30px] px-5 rounded-3' data-aos="flip-right">
                         <div className='flex items-center gap-[13px]'>
                             <img src="https://avatars.githubusercontent.com/u/115913715?v=4" className='rounded-lg' height={10} width={40} alt="" />
                             <div>
@@ -48,7 +48,7 @@ const Testimonials = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='py-[30px] px-5 rounded-3'>
+                    <div className='py-[30px] px-5 rounded-3' data-aos="flip-left">
                         <div className='flex items-center gap-[13px]'>
                             <img src={paitAvatar} alt="" />
                             <div>
@@ -70,7 +70,7 @@ const Testimonials = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='py-[30px] px-5 rounded-3'>
+                    <div className='py-[30px] px-5 rounded-3' data-aos="flip-right">
                         <div className='flex items-center gap-[13px]'>
                             <img src="https://avatars.githubusercontent.com/u/118839109?v=4" className='rounded-lg' height={10} width={40} alt="" />
                             <div>
@@ -92,7 +92,7 @@ const Testimonials = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='py-[30px] px-5 rounded-3'>
+                    <div className='py-[30px] px-5 rounded-3' data-aos="flip-left">
                         <div className='flex items-center gap-[13px]'>
                             <img src="https://avatars.githubusercontent.com/u/117257768?v=4" className='rounded-lg' height={10} width={40} alt="" />
                             <div>

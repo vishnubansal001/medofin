@@ -7,7 +7,7 @@ const DoctorCard = ({ doctor }) => {
 
     const { name, specialization, avgRating, totalRating, photo, totalPatients, hospital } = doctor
     return (
-        <div className='p-3 lg:p-5'>
+        <div className='p-3 lg:p-5' data-aos="flip-left">
             <div>
                 <img src={photo} className='w-full rounded-lg' alt="" />
             </div>

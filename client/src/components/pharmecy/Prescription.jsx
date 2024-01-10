@@ -12,7 +12,7 @@ const Prescription = () => {
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-12 sm:gap-16 w-full max-w-6xl -mt-[4rem] p-2">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <img src={video} alt="video" className="w-[30rem] h-auto" />
+            <img src={video} alt="video" className="w-[30rem] h-auto" data-aos="flip-right"/>
             {/* <video src="https://www.youtube.com/watch?v=9XwazFkzX9k" controls className="w-full h-full"/> */}
           </div>
           <div className="flex items-center justify-center flex-col rounded-lg bg-white shadow w-full h-full">

@@ -5,7 +5,7 @@ const Shop = () => {
         <h1 className="lg:text-3xl md:text-2xl text-xl font-semibold font-lime">
           Shop.Benefit.Evolve.
         </h1>
-        <p className="lg:w-[70%] md:w-[85%] w-[90%] md:text-lg text-base">
+        <p className="lg:w-[70%] md:w-[85%] w-[90%] md:text-lg text-base" data-aos="flip-right">
           Welcome, we bring the pharmacy to your fingertips. Hover over the
           wellness horizons with our quality healthcare every step of the way!
         </p>

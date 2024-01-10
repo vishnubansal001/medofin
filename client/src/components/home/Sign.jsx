@@ -2,9 +2,9 @@ import envelop from '../../assets/enevloper.png'
 
 const Sign = () => {
   return (
-    <div className="flex relative h-screen overflow-y-hidden">
-      <div className=' ml-[8rem] mt-[2rem] bg-transparent absolute z-[9] opacity-[1.7]'>
-        <div className="flex bg-black subs items-center justify-center p-[5rem] flex-col m-l-2rem gap-8 w-[75%] m-auto mt-9  rounded-[2rem]">
+    <div className="flex w-full items-center justify-center relative min-h-[100dvh] overflow-y-hidden">
+      <div className='mx-auto bg-transparent absolute z-[9] opacity-[1.7]'>
+        <div className="flex bg-black subs items-center justify-center p-[5rem] flex-col m-l-2rem gap-8 w-[75%] m-auto rounded-[2rem]">
           <h3 className="text-1xl font-bold text-[#6ecf6b] tracking-widest uppercase">
             Subscribe to our newsletter
           </h3>

@@ -29,7 +29,7 @@ const Facilities = () => {
 
           {/*======= Feature img ======== */}
           <div className=" relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
-            <img src={featureImg} alt="" />
+            <img src={featureImg} alt="" data-aos="flip-right"/>
 
             <div className="w-[150px] lg:w-[248px]  bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:pb-[26px] rounded-[10px]">
               <div className="flex items-center justify-between">

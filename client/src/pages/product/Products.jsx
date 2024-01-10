@@ -172,7 +172,7 @@ const Products = () => {
       <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-white/50 backdrop-blur-sm bg-clip">
         <nav className="flex items-center justify-center w-full flex-col gap-2">
           <div className="flex items-center justify-between px-6 py-3 border-[#dfdfdf] border-b w-full">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2" >
               <img src={logo} alt="logo" className="w-12 h-12" />
               <p className="font-lime text-base sm:flex hidden">Medofin</p>
             </div>
@@ -206,7 +206,7 @@ const Products = () => {
       <main className="w-full min-h-[100dvh] h-full flex items-center justify-center flex-col gap-12">
         <section className="w-full min-h-screen h-full flex items-center justify-center bg-product rounded-br-[5rem] rounded-bl-[5rem]">
           <div className="flex items-center justify-center w-full">
-            <div className="flex w-full flex-col py-12 px-4">
+            <div className="flex w-full flex-col pb-12 pt-32 md:py-12 px-4">
               <Swiper
                 modules={[Navigation, Pagination]}
                 navigation={false}
@@ -235,7 +235,7 @@ const Products = () => {
                     key={index}
                     className="s:p-4 xs:p-7 p-4 flex items-center justify-center"
                   >
-                    <div className="flex items-center justify-center p-4 bg-[#28661e] sm:w-[50%] md:w-[95%] h-72 rounded-lg">
+                    <div data-aos="flip-right" className="flex items-center justify-center p-4 bg-[#28661e] md:w-[95%] h-72 rounded-lg">
                       <img
                         src={item.image}
                         alt={`Image ${index + 1}`}
@@ -255,6 +255,7 @@ const Products = () => {
                 {products.map((item, index) => (
                   <div
                     key={index}
+                    data-aos="flip-left"
                     className="flex flex-col gap-2 border border-gray-300 text-center"
                   >
                     <img
@@ -321,6 +322,7 @@ const Products = () => {
                   {minerals.map((item, index) => (
                     <div
                       key={index}
+                      data-aos="flip-right"
                       className="flex flex-col gap-2 border border-gray-300 text-center"
                     >
                       <img
@@ -358,6 +360,7 @@ const Products = () => {
                   {coldfever.map((item, index) => (
                     <div
                       key={index}
+                      data-aos="flip-left"
                       className="flex flex-col gap-2 border border-gray-300 text-center"
                     >
                       <img
@@ -392,14 +395,14 @@ const Products = () => {
           <div className="flex items-center justify-center w-full h-full">
             <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center">
               <div className="flex items-center justify-center flex-col gap-4 text-white h-full bg-[#28661E] w-full p-12 sm:p-16 md:p-24 lg:p-32">
-                <div className="flex items-start w-full justify-start font-Inter">
+                <div className="flex items-start w-full justify-start font-Inter" data-aos="flip-left">
                   <h1 className="text-2xl lg:text-4xl">Your health, made affordable</h1>
                 </div>
-                <div className="lg:text-base text-sm flex items-center justify-start font-Inter">
+                <div className="lg:text-base text-sm flex items-center justify-start font-Inter" data-aos="flip-right">
                   <p> At Medofin, we believe everyone deserves access to quality medication at fair prices. We cut out unnecessary costs and partner directly with manufacturers to bring you the savings you need. So whether you&apos;re refilling a prescription or trying a new supplement, you can feel confident knowing you&apos;re getting the best value for your health. With Medofine, staying healthy is always within reach.</p>
                 </div>
               </div>
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center" data-aos="flip-left">
                 <img src={health} alt="heath" className="w-full h-full" />
               </div>
             </div>
@@ -416,6 +419,7 @@ const Products = () => {
                   {topsellProducts.map((item, index) => (
                     <div
                       key={index}
+                      data-aos="flip-right"
                       className="flex flex-col md:flex-row gap-2 border border-gray-300 text-center"
                     >
                       <img

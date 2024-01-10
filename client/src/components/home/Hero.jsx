@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row gap-[50px] items-center justify-between">
               {/* ======Hero Content===== */}
               <div>
-                <div className="lg:w-[500px]">
+                <div className="lg:w-[500px]" data-aos="flip-right">
                   <h1 className="text-[30px] leading-[46px] text-[#181A1E] font-[800] md:text-[50px] md:leading-[60px]">
                     Providing Best Online Clinic to get Solutions in hand.
                   </h1>
@@ -56,7 +56,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-[30px] justify-end">
+              <div className="flex gap-[30px] justify-end" data-aos="zoom-in">
                 <div>
                   <img className='w-full' src={heroImg} alt="" />
                 </div>

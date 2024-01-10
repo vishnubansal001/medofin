@@ -15,6 +15,7 @@ const CheckUp = () => {
         {checkup?.map((item, ind) => (
           <div
             key={ind}
+            data-aos="zoom-in-up"
             className="flex flex-col justify-between h-full gap-4 border-2 rounded-[14px] border-gray-200"
           >
             <div className="flex flex-col gap-2">

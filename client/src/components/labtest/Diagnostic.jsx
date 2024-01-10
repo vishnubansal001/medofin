@@ -10,6 +10,7 @@ const Diagnostic = () => {
         {disgnostic?.map((item, ind) => (
           <div
             key={ind}
+            data-aos="flip-right"
             className="border-[1px] border-[#F0F0F5] items-start flex flex-col justify-start pt-2 gap-4"
           >
             <h1 className="px-3 text-lg font-semibold">{item.name}</h1>

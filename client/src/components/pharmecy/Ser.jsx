@@ -15,7 +15,7 @@ const Ser = () => {
               <h1 className="lg:text-4xl font-semibold md:text-2xl text-xl">{card.name}</h1>
               <p className="lg:text-lg text-base">{card.text}</p>
             </div>
-            <img src={card.img} alt="" />
+            <img src={card.img} alt="" data-aos="zoom-in"/>
           </div>
         ))}
       </div>
