@@ -14,6 +14,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import ContactUs from "./pages/Contact/ContactUs";
 import { useLocation } from "react-router-dom";
+import LabListing from "./pages/labs-listing/LabListing";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/lab-test" element={<LabTest />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
+        <Route path="/lab-list/:id" element={<LabListing />}></Route>
       </Routes>
     </>
   );

@@ -1,6 +1,8 @@
 import { checkup } from "../../database/data";
+import { useNavigate } from "react-router-dom";
 
 const CheckUp = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col lg:px-20 pb-10 px-10 gap-5">
       <h1 className="lg:text-2xl md:text-xl text-lg font-semibold">
@@ -38,7 +40,10 @@ const CheckUp = () => {
                   {item.disc}
                 </p>
               </div>
-              <button className="bg-[#28661E] rounded-[14px] md:text-lg font-semibold text-base text-white px-3 py-2">
+              <button
+                onClick={() => navigate(`/lab-list/${ind}`)}
+                className="bg-[#28661E] rounded-[14px] md:text-lg font-semibold text-base text-white px-3 py-2"
+              >
                 {item.btn}
               </button>
             </div>
