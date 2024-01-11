@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import { CiShoppingCart } from "react-icons/ci";
@@ -10,8 +9,10 @@ import CheckUp from "../../components/labtest/CheckUp";
 import { Footer } from "../../components/home";
 import Benefits from "../../components/labtest/Benefits";
 import How from "../../components/labtest/How";
+import { useNavigate } from "react-router-dom";
 
 const LabTest = () => {
+  const navigate = useNavigate();
   return (
     <>
       <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-[#28661E] h-[4.5rem] backdrop-blur-sm bg-clip">
@@ -23,15 +24,24 @@ const LabTest = () => {
                 Medofin
               </p>
             </div>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            <p
+              onClick={() => navigate("/")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               Home
-            </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            </p>
+            <p
+              onClick={() => navigate("/lab-test")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               LabTest
-            </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            </p>
+            <p
+              onClick={() => navigate("/lab-test")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               Sample Collection
-            </NavLink>
+            </p>
           </div>
         </nav>
       </header>
@@ -58,7 +68,10 @@ const LabTest = () => {
             </div>
           </div>
         </div>
-        <button className="bg-white text-black px-5 py-2 flex flex-row gap-2 justify-center items-center border-2 rounded-md">
+        <button
+          onClick={() => navigate("/cart")}
+          className="bg-white text-black px-5 py-2 flex flex-row gap-2 justify-center items-center border-2 rounded-md"
+        >
           <CiShoppingCart /> Cart
         </button>
       </div>

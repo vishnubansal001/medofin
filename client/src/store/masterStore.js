@@ -84,14 +84,25 @@ export const useCartStore = create(
           if (existingItem) {
             const updatedCartItems = state.cartItems.map((cartItem) =>
               cartItem.id === item.id
-                ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                ? {
+                    ...cartItem,
+                    quantity: cartItem.quantity + 1,
+                    total: (cartItem.quantity + 1) * cartItem.price,
+                  }
                 : cartItem
             );
 
             return { cartItems: updatedCartItems };
           } else {
             return {
-              cartItems: [...state.cartItems, { ...item, quantity: 1 }],
+              cartItems: [
+                ...state.cartItems,
+                {
+                  ...item,
+                  quantity: 1,
+                  total: item.price,
+                },
+              ],
             };
           }
         }),
@@ -101,9 +112,13 @@ export const useCartStore = create(
           const updatedCartItems = state.cartItems.map((cartItem) => {
             if (cartItem.id === itemId) {
               if (cartItem.quantity > 1) {
-                return { ...cartItem, quantity: cartItem.quantity - 1 };
+                const updatedCartItem = {
+                  ...cartItem,
+                  quantity: cartItem.quantity - 1,
+                  total: (cartItem.quantity - 1) * cartItem.price,
+                };
+                return updatedCartItem;
               }
-
               return null;
             }
             return cartItem;

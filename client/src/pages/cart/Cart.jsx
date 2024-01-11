@@ -89,13 +89,13 @@ const Cart = () => {
                         </div>
                       </div>
                       <div className="flex items-end justify-center gap-2 flex-col">
-                        <h2 className="text-base">₹{item.price}</h2>
+                        <h2 className="text-base">₹{item.total}</h2>
                         <div className="grid grid-cols-3 items-center justify-center">
                           <button onClick={()=>addToCart(item)} className="border-[#28661e] h-full text-[#28661e] border p-2 flex items-center justify-center">
                             <FaPlus className="w-4 h-4"/>
                           </button>
                           <button className="bg-[#28661e] p-2 h-full flex items-center justify-center text-white rounded-sm">{item.quantity}</button>
-                          <button onClick={()=>removeFromCart(item)} className="border-[#28661e] h-full text-[#28661e] border p-2 flex items-center justify-center">
+                          <button onClick={()=>removeFromCart(item.id)} className="border-[#28661e] h-full text-[#28661e] border p-2 flex items-center justify-center">
                             <FaMinus className="w-4 h-4"/>
                           </button>
                           </div>
@@ -110,7 +110,7 @@ const Cart = () => {
                     <div className="text-sm">
                       Payable Amount:{" "}
                       {cartItems.reduce((num, item) => {
-                        return num + item.price;
+                        return num + item.total;
                       }, 0)}
                     </div>
                     <button className="rounded-md flex items-center justify-center bg-[#28661e] text-white w-full py-2 px-4">

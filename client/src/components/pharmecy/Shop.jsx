@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const Shop = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex flex-col justify-center items-center lg:px-20 pb-10 px-10">
       <div className="bg-opacity-50 w-full py-20 flex flex-col justify-center items-center text-center gap-6 rounded-[50px]">
@@ -12,7 +15,10 @@ const Shop = () => {
           Welcome, we bring the pharmacy to your fingertips. Hover over the
           wellness horizons with our quality healthcare every step of the way!
         </p>
-        <button className="bg-[#28661E] rounded-full px-8 py-3 text-white transition-all duration-300 ease-in-out hover:bg-[#3f8f32] hover:shadow-lg">
+        <button
+          onClick={() => navigate("/products")}
+          className="bg-[#28661E] rounded-full px-8 py-3 text-white transition-all duration-300 ease-in-out hover:bg-[#3f8f32] hover:shadow-lg"
+        >
           Shop Medicines
         </button>
       </div>

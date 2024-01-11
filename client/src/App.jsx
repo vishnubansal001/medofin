@@ -12,11 +12,16 @@ import LabTest from "./pages/labtest/LabTest";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import ContactUs from "./pages/Contact/ContactUs";
+import { useLocation } from "react-router-dom";
 function App() {
+  const location = useLocation();
   useEffect(() => {
     AOS.init();
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
@@ -30,6 +35,7 @@ function App() {
         <Route path="/pharmacy" element={<Pharmacy />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/lab-test" element={<LabTest />}></Route>
+        <Route path="/contact" element={<ContactUs />}></Route>
       </Routes>
     </>
   );

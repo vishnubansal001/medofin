@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const navItems = [
-  { value: "Facilities", path: "/facilities" },
-  { value: "Categories", path: "/categories" },
-  { value: "Doctors", path: "/doctors" },
+  { value: "Home", path: "/" },
+  { value: "Pharmacy", path: "/pharmacy" },
+  { value: "Medicines", path: "/products" },
   { value: "Contact", path: "/contact" },
 ];
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             >
               Medicines
             </Link>
-            <Link className="lg:text-lg text-base cursor-pointer select-none">
+            <Link to="/contact" className="lg:text-lg text-base cursor-pointer select-none">
               Contact
             </Link>
             <button
