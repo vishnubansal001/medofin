@@ -166,8 +166,7 @@ const topsellProducts = [
 ];
 
 const Products = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState(products);
+
   const navigate = useNavigate();
   const addToCart = useCartStore((state) => state.addToCart);
 
@@ -176,13 +175,22 @@ const Products = () => {
     console.log("Item added to cart:", item);
   };
 
+  const [searchQuery, setSearchQuery] = useState('');
+
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filtered = products.filter((product) =>
-      product.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredProducts(filtered);
   };
+
+  const filterItems = (items) => {
+    return items.filter((item) =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  };
+
+  const filteredProducts = filterItems(products);
+  const filteredMinerals = filterItems(minerals);
+  const filteredColdFever = filterItems(coldfever);
+  const filteredTopSellProducts = filterItems(topsellProducts);
 
   SwiperCore.use([Navigation, Pagination]);
   return (
@@ -354,7 +362,7 @@ const Products = () => {
                   Vitamins & minerals
                 </h1>
                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                  {minerals.map((item, index) => (
+                  {filteredMinerals.map((item, index) => (
                     <div
                       key={index}
                       data-aos="flip-right"
@@ -395,7 +403,7 @@ const Products = () => {
                   Cold & Fever
                 </h1>
                 <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                  {coldfever.map((item, index) => (
+                  {filteredColdFever.map((item, index) => (
                     <div
                       key={index}
                       data-aos="flip-left"
@@ -477,7 +485,7 @@ const Products = () => {
                   Top Selling products
                 </h1>
                 <div className="grid w-full sm:grid-cols-2 grid-cols-1 items-center justify-center gap-6">
-                  {topsellProducts.map((item, index) => (
+                  {filteredTopSellProducts.map((item, index) => (
                     <div
                       key={index}
                       data-aos="flip-right"
