@@ -82,25 +82,25 @@ const products = [
 ];
 const minerals = [
   {
-    id: 1,
+    id: 9,
     image: featuresProduct,
     name: "Supradyn Daily Multivitamin (15 Tablets)",
     price: 49.0,
   },
   {
-    id: 2,
+    id: 10,
     image: featuresProduct,
     name: "Supradyn Daily Multivitamin (15 Tablets)",
     price: 49.0,
   },
   {
-    id: 3,
+    id: 11,
     image: featuresProduct,
     name: "Supradyn Daily Multivitamin (15 Tablets)",
     price: 49.0,
   },
   {
-    id: 4,
+    id: 12,
     image: featuresProduct,
     name: "Supradyn Daily Multivitamin (15 Tablets)",
     price: 49.0,
@@ -108,31 +108,31 @@ const minerals = [
 ];
 const coldfever = [
   {
-    id: 1,
+    id: 13,
     image: coldProduct,
     name: "Nicip Cold And Flu Strip Of 10 Tablets",
     price: 63.8,
   },
   {
-    id: 2,
+    id: 14,
     image: coldProduct,
     name: "Nicip Cold And Flu Strip Of 10 Tablets",
     price: 63.8,
   },
   {
-    id: 3,
+    id: 15,
     image: coldProduct,
     name: "Nicip Cold And Flu Strip Of 10 Tablets",
     price: 63.8,
   },
   {
-    id: 4,
+    id: 16,
     image: coldProduct,
     name: "Nicip Cold And Flu Strip Of 10 Tablets",
     price: 63.8,
   },
   {
-    id: 5,
+    id: 17,
     image: coldProduct,
     name: "Nicip Cold And Flu Strip Of 10 Tablets",
     price: 63.8,
@@ -140,25 +140,25 @@ const coldfever = [
 ];
 const topsellProducts = [
   {
-    id: 1,
+    id: 18,
     image: topsell,
     name: "Nose Spray 30ml Drops",
     price: 69,
   },
   {
-    id: 2,
+    id: 19,
     image: topsell,
     name: "Nose Spray 30ml Drops",
     price: 69,
   },
   {
-    id: 3,
+    id: 20,
     image: topsell,
     name: "Nose Spray 30ml Drops",
     price: 69,
   },
   {
-    id: 4,
+    id: 21,
     image: topsell,
     name: "Nose Spray 30ml Drops",
     price: 69,
@@ -232,8 +232,8 @@ const Products = () => {
           </div>
         </nav>
       </header>
-      <main className="w-full min-h-[100dvh] h-full flex items-center justify-center flex-col gap-12">
-        <section className="w-full min-h-screen h-full flex items-center justify-center bg-product rounded-br-[5rem] rounded-bl-[5rem]">
+      <main className="w-full h-full flex items-center justify-center flex-col gap-10 pt-[7rem]">
+        <section className="w-full h-full flex items-center justify-center bg-product rounded-br-[5rem] rounded-bl-[5rem]">
           <div className="flex items-center justify-center w-full">
             <div className="flex w-full flex-col pb-12 pt-32 md:py-12 px-4">
               <Swiper
@@ -372,7 +372,10 @@ const Products = () => {
                         <div className="text-[#28661E] font-semibold">
                           Rs. {item.price}
                         </div>
-                        <button className="bg-[#D9D9D9] text-black rounded-full px-6 py-2">
+                        <button
+                          onClick={() => handleAddToCart(item)}
+                          className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
+                        >
                           Add to Cart
                         </button>
                       </div>
@@ -410,7 +413,10 @@ const Products = () => {
                         <div className="text-[#28661E] font-semibold">
                           Rs. {item.price}
                         </div>
-                        <button className="bg-[#D9D9D9] text-black rounded-full px-6 py-2">
+                        <button
+                          onClick={() => handleAddToCart(item)}
+                          className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
+                        >
                           Add to Cart
                         </button>
                       </div>
@@ -489,7 +495,10 @@ const Products = () => {
                         <div className="text-[#28661E] font-semibold">
                           Rs. {item.price}
                         </div>
-                        <button className="bg-[#D9D9D9] text-black rounded-full px-6 py-2">
+                        <button
+                          onClick={() => handleAddToCart(item)}
+                          className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
+                        >
                           Add to Cart
                         </button>
                       </div>
