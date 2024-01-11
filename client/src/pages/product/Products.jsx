@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import "swiper/css";
 import image2 from "../../assets/image2.png";
@@ -19,8 +18,8 @@ import health from "../../assets/health.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.css";
-import { useEffect, useState } from "react";
-import { useCartStore, useProductsStore } from "../../store/masterStore";
+import { useState } from "react";
+import { useCartStore } from "../../store/masterStore";
 import { useNavigate } from "react-router-dom";
 
 const data = [
@@ -170,23 +169,12 @@ const Products = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(products);
   const navigate = useNavigate();
-  // const {products,minerals,coldfever,topsellProducts} = useProductsStore(); zustand is added in masterStore.js you can apply it here by removing comment and default state
   const addToCart = useCartStore((state) => state.addToCart);
 
   const handleAddToCart = (item) => {
     addToCart(item);
     console.log("Item added to cart:", item);
   };
-
-  // const fetchData = useProductsStore((state) => state.fetchData);
-
-  // useEffect(() => {
-  //   fetchData("/api/products");
-  //   fetchData("/api/minerals");
-  //   fetchData("/api/coldfever");
-  //   fetchData("/api/topsellProducts");
-  // }, []);
-  ///dummy api code for usage
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -199,7 +187,7 @@ const Products = () => {
   SwiperCore.use([Navigation, Pagination]);
   return (
     <>
-      <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-white/50 backdrop-blur-sm bg-clip">
+      <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-white">
         <nav className="flex items-center justify-center w-full flex-col gap-2">
           <div className="flex items-center justify-between px-6 py-3 border-[#dfdfdf] border-b w-full">
             <div className="flex items-center justify-center gap-2">

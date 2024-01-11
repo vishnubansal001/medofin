@@ -8,6 +8,7 @@ const navItems = [
   { value: "Home", path: "/" },
   { value: "Pharmacy", path: "/pharmacy" },
   { value: "Medicines", path: "/products" },
+  { value: "Lab Test", path: "/lab-test" },
   { value: "Contact", path: "/contact" },
 ];
 
@@ -43,6 +44,12 @@ const Navbar = () => {
               className="lg:text-lg text-base cursor-pointer select-none"
             >
               Medicines
+            </Link>
+            <Link
+              to="/lab-test"
+              className="lg:text-lg text-base cursor-pointer select-none"
+            >
+              Lab Test
             </Link>
             <Link to="/contact" className="lg:text-lg text-base cursor-pointer select-none">
               Contact
