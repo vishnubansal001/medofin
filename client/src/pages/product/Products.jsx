@@ -178,14 +178,15 @@ const Products = () => {
     console.log("Item added to cart:", item);
   };
 
-  const fetchData = useProductsStore((state) => state.fetchData);
+  // const fetchData = useProductsStore((state) => state.fetchData);
 
-  useEffect(() => {
-    fetchData("/api/products");
-    fetchData("/api/minerals");
-    fetchData("/api/coldfever");
-    fetchData("/api/topsellProducts");
-  }, []);
+  // useEffect(() => {
+  //   fetchData("/api/products");
+  //   fetchData("/api/minerals");
+  //   fetchData("/api/coldfever");
+  //   fetchData("/api/topsellProducts");
+  // }, []);
+  ///dummy api code for usage
 
   const handleSearch = (query) => {
     setSearchQuery(query);
