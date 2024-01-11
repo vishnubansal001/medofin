@@ -1,25 +1,36 @@
-import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import labHero from "../../assets/labshero.svg";
 import { Footer, Technologies } from "../../components/home";
 import { Labques, labTechno } from "../../database/data";
 import bg from "../../assets/bg.png";
+import { useNavigate } from "react-router-dom";
+
 const Labs = () => {
+  const navigate = useNavigate();
   return (
     <>
       <header className="flex items-center justify-center w-full p-2 fixed top-0">
         <nav className="flex items-center justify-center w-full p-2">
           <div className="flex items-center justify-between p-1 w-full">
             <img src={logo} alt="logo" className="w-12 h-12" />
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            <p
+              onClick={() => navigate("/")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               Home
-            </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            </p>
+            <p
+              onClick={() => navigate("/lab-test")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               LabTest
-            </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-white">
+            </p>
+            <p
+              onClick={() => navigate("/lab-test")}
+              className="text-xs cursor-pointer s:text-sm sm:text-base font-normal font-popp text-white"
+            >
               Sample Collection
-            </NavLink>
+            </p>
           </div>
         </nav>
       </header>
