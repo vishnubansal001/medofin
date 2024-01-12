@@ -21,7 +21,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className=" bg-white font-popp fixed w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden z-[1000]">
+      <div className=" bg-white font-popp fixed top-0 w-full py-3 px-20 flex-col justify-center items-center lg:flex hidden z-[1000]">
         <div className="flex flex-row justify-between w-full gap-5 items-center">
           <div className="flex">
             <img src={logo} alt="img/logo png" className="w-16" />

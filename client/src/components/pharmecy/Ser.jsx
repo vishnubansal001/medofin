@@ -17,7 +17,7 @@ const Ser = () => {
               </h1>
               <p className="lg:text-lg text-base">{card.text}</p>
             </div>
-            <img src={card.img} alt="" data-aos="zoom-in" />
+            <img src={card.img} alt="" className="w-auto h-56" data-aos="zoom-in" />
           </div>
         ))}
       </div>

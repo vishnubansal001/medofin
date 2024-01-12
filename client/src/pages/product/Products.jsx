@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import SwiperCore from "swiper";
 import "swiper/css";
@@ -11,7 +9,7 @@ import listimage1 from "../../assets/listimage1.png";
 import listimage2 from "../../assets/listimage2.png";
 import listimage3 from "../../assets/listimage3.png";
 import featuresProduct from "../../assets/featuresProduct.png";
-import { Footer } from "../../components/home";
+import { Footer, Navbar } from "../../components/home";
 import coldProduct from "../../assets/coldProduct.png";
 import topsell from "../../assets/topsell.png";
 import health from "../../assets/health.png";
@@ -166,8 +164,8 @@ const topsellProducts = [
 ];
 
 const Products = () => {
-
   const navigate = useNavigate();
+  const { cartItems } = useCartStore((state) => state);
   const addToCart = useCartStore((state) => state.addToCart);
 
   const handleAddToCart = (item) => {
@@ -175,7 +173,7 @@ const Products = () => {
     console.log("Item added to cart:", item);
   };
 
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -195,29 +193,9 @@ const Products = () => {
   SwiperCore.use([Navigation, Pagination]);
   return (
     <>
-      <header className="flex items-center justify-center w-full z-10 fixed top-0 bg-white">
+      <Navbar />
+      <header className="flex items-center justify-center w-full z-10 fixed top-[5.5rem] bg-opacity-20 bg-white py-2">
         <nav className="flex items-center justify-center w-full flex-col gap-2">
-          <div className="flex items-center justify-between px-6 py-3 border-[#dfdfdf] border-b w-full">
-            <div className="flex items-center justify-center gap-2">
-              <img src={logo} alt="logo" className="w-12 h-12" />
-              <p className="font-lime text-base sm:flex hidden">Medofin</p>
-            </div>
-            <NavLink
-              to="/"
-              className="text-xs s:text-sm sm:text-base font-normal font-popp text-black"
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/labs"
-              className="text-xs s:text-sm sm:text-base font-normal font-popp text-black"
-            >
-              LabTest
-            </NavLink>
-            <NavLink className="text-xs s:text-sm sm:text-base font-normal font-popp text-black">
-              Sample Collection
-            </NavLink>
-          </div>
           <div className="flex items-center justify-between px-12 py-2 md:flex-row flex-col w-full gap-2">
             <div className="relative w-full md:w-[30rem]">
               <input
@@ -240,9 +218,9 @@ const Products = () => {
           </div>
         </nav>
       </header>
-      <main className="w-full h-full flex items-center justify-center flex-col gap-10 pt-[7rem]">
-        <section className="w-full h-full flex items-center justify-center bg-product rounded-br-[5rem] rounded-bl-[5rem]">
-          <div className="flex items-center justify-center w-full">
+      <main className="w-full min-h-[100dvh] h-full flex items-center justify-center flex-col gap-10 ">
+        <section className="w-full min-h-[100dvh] h-full flex items-center justify-center bg-product bg-cover rounded-br-[5rem] rounded-bl-[5rem]">
+          <div className="flex items-center justify-center pt-[6rem] w-full">
             <div className="flex w-full flex-col pb-12 pt-32 md:py-12 px-4">
               <Swiper
                 modules={[Navigation, Pagination]}
@@ -292,7 +270,9 @@ const Products = () => {
           <div className="flex items-center justify-center p-2 max-w-screen-xl mx-auto w-full">
             <div className="flex flex-col items-center justify-center gap-14 w-full">
               <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                {filteredProducts.map((item, index) => (
+                {filteredProducts.length === 0 ? (
+                    <p className="w-full text-lg font-bold lg:col-span-3 xl:col-span-4 sm:col-span-2 col-span-1 italic flex items-center justify-center">No items found</p>
+                  ) : (filteredProducts.map((item, index) => (
                   <div
                     key={index}
                     data-aos="flip-left"
@@ -312,11 +292,13 @@ const Products = () => {
                         onClick={() => handleAddToCart(item)}
                         className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
                       >
-                        Add to Cart
+                        {cartItems.find((cartItem) => cartItem.id === item.id)
+                          ? "Added To Cart"
+                          : "Add to Cart"}
                       </button>
                     </div>
                   </div>
-                ))}
+                )))}
               </div>
             </div>
           </div>
@@ -362,7 +344,9 @@ const Products = () => {
                   Vitamins & minerals
                 </h1>
                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                  {filteredMinerals.map((item, index) => (
+                  {filteredMinerals.length === 0 ? (
+                    <p className="w-full text-base font-bol italic lg:col-span-3 xl:col-span-4 sm:col-span-2 col-span-1 flex items-center justify-center">No items found</p>
+                  ) : (filteredMinerals.map((item, index) => (
                     <div
                       key={index}
                       data-aos="flip-right"
@@ -384,11 +368,13 @@ const Products = () => {
                           onClick={() => handleAddToCart(item)}
                           className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
                         >
-                          Add to Cart
+                          {cartItems.find((cartItem) => cartItem.id === item.id)
+                            ? "Added To Cart"
+                            : "Add to Cart"}
                         </button>
                       </div>
                     </div>
-                  ))}
+                  )))}
                 </div>
               </div>
             </div>
@@ -403,7 +389,9 @@ const Products = () => {
                   Cold & Fever
                 </h1>
                 <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-12">
-                  {filteredColdFever.map((item, index) => (
+                  {filteredColdFever.length === 0 ? (
+                    <p className="w-full text-base font-bol italic lg:col-span-4 xl:col-span-5 md:grid-cols-3 sm:col-span-2 col-span-1 flex items-center justify-center">No items found</p>
+                  ) : (filteredColdFever.map((item, index) => (
                     <div
                       key={index}
                       data-aos="flip-left"
@@ -425,11 +413,13 @@ const Products = () => {
                           onClick={() => handleAddToCart(item)}
                           className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
                         >
-                          Add to Cart
+                          {cartItems.find((cartItem) => cartItem.id === item.id)
+                            ? "Added To Cart"
+                            : "Add to Cart"}
                         </button>
                       </div>
                     </div>
-                  ))}
+                  )))}
                 </div>
               </div>
             </div>
@@ -485,33 +475,41 @@ const Products = () => {
                   Top Selling products
                 </h1>
                 <div className="grid w-full sm:grid-cols-2 grid-cols-1 items-center justify-center gap-6">
-                  {filteredTopSellProducts.map((item, index) => (
-                    <div
-                      key={index}
-                      data-aos="flip-right"
-                      className="flex flex-col md:flex-row gap-2 border border-gray-300 text-center"
-                    >
-                      <img
-                        src={item.image}
-                        alt={name}
-                        className="w-32 h-auto object-cover mx-auto"
-                      />
-                      <div className="w-full flex flex-col gap-2 p-4 items-start justify-center md:text-start text-center">
-                        <div className="text-gray-700 font-bold">
-                          {item.name}
+                  {filteredTopSellProducts.length === 0 ? (
+                    <p className="w-full text-base font-bol sm:col-span-2 col-span-1 italic flex items-center justify-center">No items found</p>
+                  ) : (
+                    filteredTopSellProducts.map((item, index) => (
+                      <div
+                        key={index}
+                        data-aos="flip-right"
+                        className="flex flex-col md:flex-row gap-2 border border-gray-300 text-center"
+                      >
+                        <img
+                          src={item.image}
+                          alt={name}
+                          className="w-32 h-auto object-cover mx-auto"
+                        />
+                        <div className="w-full flex flex-col gap-2 p-4 items-start justify-center md:text-start text-center">
+                          <div className="text-gray-700 font-bold">
+                            {item.name}
+                          </div>
+                          <div className="text-[#28661E] font-semibold">
+                            Rs. {item.price}
+                          </div>
+                          <button
+                            onClick={() => handleAddToCart(item)}
+                            className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
+                          >
+                            {cartItems.find(
+                              (cartItem) => cartItem.id === item.id
+                            )
+                              ? "Added To Cart"
+                              : "Add to Cart"}
+                          </button>
                         </div>
-                        <div className="text-[#28661E] font-semibold">
-                          Rs. {item.price}
-                        </div>
-                        <button
-                          onClick={() => handleAddToCart(item)}
-                          className="bg-[#D9D9D9] text-black rounded-full px-6 py-2"
-                        >
-                          Add to Cart
-                        </button>
                       </div>
-                    </div>
-                  ))}
+                    ))
+                  )}
                 </div>
               </div>
             </div>

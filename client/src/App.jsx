@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import ContactUs from "./pages/Contact/ContactUs";
 import { useLocation } from "react-router-dom";
 import LabListing from "./pages/labs-listing/LabListing";
+import Doctors from "./pages/doctors/Doctors";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/labs" element={<Labs />}></Route>
+        <Route path="/doctors" element={<Doctors />}></Route>
         <Route path="/exp" element={<Experience />}></Route>
         <Route path="/products" element={<Products />}></Route>
         <Route path="/pharmacy" element={<Pharmacy />}></Route>

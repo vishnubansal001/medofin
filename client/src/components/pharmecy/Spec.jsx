@@ -25,7 +25,7 @@ const Spec = () => {
           </button>
         </div>
         <div>
-          <img src={feel} alt="" />
+          <img src={feel} alt="" className=""/>
         </div>
       </div>
     </div>

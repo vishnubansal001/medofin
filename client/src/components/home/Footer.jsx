@@ -51,7 +51,7 @@ export default function Footer() {
             <div key={key} className="w-full">
               <Typography
                 variant="small"
-                className="mb-4 font-bold uppercase text-white text-2xl"
+                className="mb-4 !text-lg font-bold uppercase text-white text-2xl"
               >
                 {title}
               </Typography>
@@ -60,7 +60,7 @@ export default function Footer() {
                   <Typography
                     key={key}
                     as="li"
-                    className="font-normal text-gray-600 hover:text-white text-xl"
+                    className="font-normal !text-base text-gray-600 hover:text-white text-xl"
                   >
                     <a
                       href="#"

@@ -23,7 +23,7 @@ const Diagnostic = () => {
                 <p>{item.head}</p>
               </div>
               <p className="px-3 text-lg font-semibold">{item.price}</p>
-              <button className=" border-[1px] w-[70%] lg:text-lg text-base text-[#28661E] font-semibold border-[#F0F0F5]">
+              <button className=" border-[1px] w-[70%] mx-auto lg:text-lg text-base text-[#28661E] font-semibold border-[#F0F0F5]">
                 {item.btn}
               </button>
             </div>
