@@ -10,6 +10,7 @@ const navItems = [
   { value: "Medicines", path: "/products" },
   { value: "Lab Test", path: "/lab-test" },
   { value: "Contact", path: "/contact" },
+  { value: "Doctors", path: "/doctors" },
 ];
 
 const Navbar = () => {
@@ -50,6 +51,12 @@ const Navbar = () => {
               className="lg:text-lg text-base cursor-pointer select-none"
             >
               Lab Test
+            </Link>
+            <Link
+              to="/doctors"
+              className="lg:text-lg text-base cursor-pointer select-none"
+            >
+              Doctors
             </Link>
             <Link to="/contact" className="lg:text-lg text-base cursor-pointer select-none">
               Contact
